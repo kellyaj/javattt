@@ -19,7 +19,7 @@ public class Board {
 
   public boolean isTaken(String chosenSpot) {
     String spotValue = this.positions.get(chosenSpot);
-    if (spotValue.equals(null))
+    if (spotValue.equals(chosenSpot))
       return false;
     return true;
   }
@@ -27,15 +27,15 @@ public class Board {
   // this thing
   public static void main(String[] args) {
     HashMap<String, String> positions = new HashMap<String, String>();
-    positions.put("1", null);
-    positions.put("2", null);
-    positions.put("3", null);
-    positions.put("4", null);
-    positions.put("5", null);
-    positions.put("6", null);
-    positions.put("7", null);
-    positions.put("8", null);
-    positions.put("9", null);
+    positions.put("1", "1");
+    positions.put("2", "2");
+    positions.put("3", "3");
+    positions.put("4", "4");
+    positions.put("5", "5");
+    positions.put("6", "6");
+    positions.put("7", "7");
+    positions.put("8", "8");
+    positions.put("9", "9");
     Board myBoard = new Board(positions);
     System.out.println(myBoard.positions);
     myBoard.placeMove("1", "X");
