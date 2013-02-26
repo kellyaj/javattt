@@ -17,6 +17,13 @@ public class Board {
     return true;
   }
 
+  public boolean isTaken(String chosenSpot) {
+    String spotValue = this.positions.get(chosenSpot);
+    if (spotValue.equals(null))
+      return false;
+    return true;
+  }
+
   // this thing
   public static void main(String[] args) {
     HashMap<String, String> positions = new HashMap<String, String>();
@@ -33,5 +40,7 @@ public class Board {
     System.out.println(myBoard.positions);
     myBoard.placeMove("1", "X");
     System.out.println(myBoard.positions);
+    boolean checkTaken = myBoard.isTaken("1");
+    System.out.println(checkTaken);
   }
 }
