@@ -24,8 +24,8 @@ public class Board {
     return true;
   }
 
-  // this thing
-  public static void main(String[] args) {
+  // this should probably be in the Game class or GameSetup class or something
+  public static HashMap<String, String> createStandardBoard() {
     HashMap<String, String> positions = new HashMap<String, String>();
     positions.put("1", "1");
     positions.put("2", "2");
@@ -36,6 +36,12 @@ public class Board {
     positions.put("7", "7");
     positions.put("8", "8");
     positions.put("9", "9");
+    return positions;
+  }
+
+  // this thing
+  public static void main(String[] args) {
+    HashMap<String, String> positions = createStandardBoard();
     Board myBoard = new Board(positions);
     System.out.println(myBoard.positions);
     myBoard.placeMove("1", "X");
