@@ -7,7 +7,7 @@ import java.util.List;
 public class Board {
 
   // fields
-  public HashMap<String, String> positions;
+  private HashMap<String, String> positions;
 
   // constructor
   public Board(HashMap<String, String> startingSpots) {
@@ -15,6 +15,9 @@ public class Board {
   }
 
   // methods
+  public HashMap<String, String> getPositions() {
+      return this.positions;
+  }
 
   public boolean placeMove(String chosenSpace, String playerMark) {
     this.positions.put(chosenSpace, playerMark);

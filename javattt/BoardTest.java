@@ -24,14 +24,14 @@ public class BoardTest {
 
   @Test
   public void itShouldHavePositions() {
-    HashMap<String, String> gameSpots = gameBoard.positions;
+    HashMap<String, String> gameSpots = gameBoard.getPositions();
     Assert.assertEquals(gameSpots.get("1"),  "1");
   }
 
   @Test
   public void itShouldAddAPlayerMove() {
     gameBoard.placeMove("1", "X");
-    Assert.assertEquals(gameBoard.positions.get("1"), "X");
+    Assert.assertEquals(gameBoard.getPositions().get("1"), "X");
     }
 
   @Test
@@ -42,7 +42,7 @@ public class BoardTest {
 
   @Test
    public void itShouldReturnAListOfAvailableSpots() {
-    List untakenSpots = gameBoard.availableSpots(gameBoard.positions);
+    List untakenSpots = gameBoard.availableSpots(gameBoard.getPositions());
     int listSize = untakenSpots.size();
     Assert.assertEquals(listSize, 9);
    }

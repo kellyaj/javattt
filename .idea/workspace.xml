@@ -6,17 +6,17 @@
       <change type="DELETED" beforePath="$PROJECT_DIR$/HumanPlayer.class" afterPath="" />
       <change type="DELETED" beforePath="$PROJECT_DIR$/Printer.class" afterPath="" />
       <change type="DELETED" beforePath="$PROJECT_DIR$/board_spec.rb" afterPath="" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/Board.java" afterPath="$PROJECT_DIR$/javattt/Board.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/HumanPlayer.java" afterPath="$PROJECT_DIR$/javattt/HumanPlayer.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/Printer.java" afterPath="$PROJECT_DIR$/javattt/Printer.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/javattt/Board.java" afterPath="$PROJECT_DIR$/javattt/Board.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/javattt/BoardTest.java" afterPath="$PROJECT_DIR$/javattt/BoardTest.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/javattt/Printer.java" afterPath="$PROJECT_DIR$/javattt/Printer.java" />
     </list>
     <ignored path="javattt.iws" />
     <ignored path=".idea/workspace.xml" />
     <file path="/Dummy.txt" changelist="b7a5fd5e-05bd-4d6e-bc34-6002083ad1f2" time="1361992028317" ignored="false" />
     <file path="/fragment.java" changelist="b7a5fd5e-05bd-4d6e-bc34-6002083ad1f2" time="1361994417151" ignored="false" />
-    <file path="/BoardTest.java" changelist="b7a5fd5e-05bd-4d6e-bc34-6002083ad1f2" time="1361997821877" ignored="false" />
-    <file path="/Board.java" changelist="b7a5fd5e-05bd-4d6e-bc34-6002083ad1f2" time="1361997874820" ignored="false" />
-    <file path="/Printer.java" changelist="b7a5fd5e-05bd-4d6e-bc34-6002083ad1f2" time="1361997994056" ignored="false" />
+    <file path="/BoardTest.java" changelist="b7a5fd5e-05bd-4d6e-bc34-6002083ad1f2" time="1361998818888" ignored="false" />
+    <file path="/Board.java" changelist="b7a5fd5e-05bd-4d6e-bc34-6002083ad1f2" time="1361998706350" ignored="false" />
+    <file path="/Printer.java" changelist="b7a5fd5e-05bd-4d6e-bc34-6002083ad1f2" time="1361998845931" ignored="false" />
     <file path="/PrinterTest.java" changelist="b7a5fd5e-05bd-4d6e-bc34-6002083ad1f2" time="1361998262363" ignored="false" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -79,7 +79,7 @@
       <file leaf-file-name="BoardTest.java" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/javattt/BoardTest.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="8" column="33" selection-start="139" selection-end="139" vertical-scroll-proportion="0.0">
+            <state line="41" column="69" selection-start="1030" selection-end="1030" vertical-scroll-proportion="0.0">
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -90,7 +90,7 @@
       <file leaf-file-name="Board.java" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/javattt/Board.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="53" column="41" selection-start="1464" selection-end="1464" vertical-scroll-proportion="0.0">
+            <state line="20" column="23" selection-start="382" selection-end="382" vertical-scroll-proportion="0.0">
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -98,10 +98,10 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="PrinterTest.java" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="PrinterTest.java" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/javattt/PrinterTest.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="13" column="35" selection-start="415" selection-end="415" vertical-scroll-proportion="0.41666666">
+            <state line="7" column="19" selection-start="162" selection-end="162" vertical-scroll-proportion="0.0">
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -109,10 +109,10 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Printer.java" pinned="false" current="false" current-in-tab="false">
+      <file leaf-file-name="Printer.java" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/javattt/Printer.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="9" column="42" selection-start="153" selection-end="153" vertical-scroll-proportion="0.0">
+            <state line="11" column="65" selection-start="158" selection-end="158" vertical-scroll-proportion="0.36263737">
               <folding />
             </state>
           </provider>
@@ -137,10 +137,10 @@
     <option name="changedFiles">
       <list>
         <option value="$PROJECT_DIR$/BoardTest.java" />
-        <option value="$PROJECT_DIR$/javattt/BoardTest.java" />
-        <option value="$PROJECT_DIR$/javattt/Board.java" />
-        <option value="$PROJECT_DIR$/javattt/Printer.java" />
         <option value="$PROJECT_DIR$/javattt/PrinterTest.java" />
+        <option value="$PROJECT_DIR$/javattt/Board.java" />
+        <option value="$PROJECT_DIR$/javattt/BoardTest.java" />
+        <option value="$PROJECT_DIR$/javattt/Printer.java" />
       </list>
     </option>
   </component>
@@ -527,18 +527,27 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/javattt/Board.java">
+    <entry file="file://$PROJECT_DIR$/javattt/BoardTest.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="53" column="41" selection-start="1464" selection-end="1464" vertical-scroll-proportion="0.0">
+        <state line="41" column="69" selection-start="1030" selection-end="1030" vertical-scroll-proportion="0.0">
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/javattt/BoardTest.java">
+    <entry file="file://$PROJECT_DIR$/javattt/Board.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="8" column="33" selection-start="139" selection-end="139" vertical-scroll-proportion="0.0">
+        <state line="20" column="23" selection-start="382" selection-end="382" vertical-scroll-proportion="0.0">
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/javattt/PrinterTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="7" column="19" selection-start="162" selection-end="162" vertical-scroll-proportion="0.0">
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
@@ -547,17 +556,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/javattt/Printer.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="9" column="42" selection-start="153" selection-end="153" vertical-scroll-proportion="0.0">
+        <state line="11" column="65" selection-start="158" selection-end="158" vertical-scroll-proportion="0.36263737">
           <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/javattt/PrinterTest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="13" column="35" selection-start="415" selection-end="415" vertical-scroll-proportion="0.41666666">
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
