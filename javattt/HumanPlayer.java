@@ -1,3 +1,5 @@
+package javattt;
+
 import java.util.Scanner;
 
 public class HumanPlayer {

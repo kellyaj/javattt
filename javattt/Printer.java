@@ -1,3 +1,5 @@
+package javattt;
+
 import java.util.HashMap;
 
 public class Printer {
@@ -22,18 +24,6 @@ public class Printer {
 
   // void thing
   public static void main(String[] args) {
-    HashMap<String, String> positions = new HashMap<String, String>();
-    positions.put("1", "1");
-    positions.put("2", "2");
-    positions.put("3", "3");
-    positions.put("4", "4");
-    positions.put("5", "5");
-    positions.put("6", "6");
-    positions.put("7", "7");
-    positions.put("8", "8");
-    positions.put("9", "9");
-    Board myBoard = new Board(positions);
-    Printer myPrinter = new Printer();
-    myPrinter.printBoard(myBoard);
+    // nothing here either
   }
 }

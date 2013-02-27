@@ -1,3 +1,5 @@
+package javattt;
+
 import java.util.HashMap;
 import java.util.LinkedList;
 import java.util.List;
@@ -19,7 +21,7 @@ public class Board {
     return true;
   }
 
-  public boolean isTaken(String chosenSpot) {
+  public boolean spotIsTaken(String chosenSpot) {
     String spotValue = this.positions.get(chosenSpot);
     if (spotValue.equals(chosenSpot))
       return false;
@@ -56,14 +58,7 @@ public class Board {
 
   // this thing
   public static void main(String[] args) {
-    HashMap<String, String> positions = createStandardBoard();
-    Board myBoard = new Board(positions);
-    System.out.println(myBoard.positions);
-    myBoard.placeMove("1", "X");
-    System.out.println(myBoard.positions);
-    boolean checkTaken = myBoard.isTaken("1");
-    System.out.println(checkTaken);
-    List testing = myBoard.availableSpots(myBoard.positions);
-    System.out.println(testing);
+      // nothing to see here
   }
+
 }
