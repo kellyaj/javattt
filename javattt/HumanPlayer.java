@@ -25,9 +25,5 @@ public class HumanPlayer {
 
   // void thing
   public static void main(String[] args) {
-    HumanPlayer testHuman = new HumanPlayer("X");
-    System.out.println(testHuman.mark);
-    String theMove = testHuman.getMove();
-    System.out.println("You Chose " + theMove);
   }
 }
