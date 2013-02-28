@@ -24,7 +24,7 @@ public class HumanPlayer {
   }
 
   // methods
-             // can I coerce this thing into allowing this?
+
   public String getMove(List<String> availableMoves) {
     outPutter.printOutput("Please enter a number to choose a move: ");
     displayAvailableMoves(availableMoves);
@@ -38,7 +38,7 @@ public class HumanPlayer {
      return chosenMove;
   }
 
-    public List displayAvailableMoves(List<String> availableMoves) {
+    public void displayAvailableMoves(List<String> availableMoves) {
         String[] spotsArray = availableMoves.toArray(new String[0]);
         String listString = "";
         for (String s : spotsArray) {

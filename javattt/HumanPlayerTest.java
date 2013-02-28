@@ -3,7 +3,11 @@ package javattt;
 import junit.framework.Assert;
 import org.junit.Test;
 
+import javax.swing.*;
 import java.io.ByteArrayInputStream;
+import java.util.ArrayList;
+import java.util.LinkedList;
+import java.util.List;
 
 public class HumanPlayerTest {
     @Test
@@ -28,10 +32,31 @@ public class HumanPlayerTest {
         String testMessage = new String("Water");
         InputHandler testInPutter = new InputHandler(new ByteArrayInputStream(testMessage.getBytes()));
         String testMark = new String("X");
+        List<String> testList = new LinkedList<String>();
+        testList.add("Water");
+        testList.add("Coffee");
         HumanPlayer testHuman = new HumanPlayer(testMark, testInPutter, testOutPutter);
-        String receivedMessage = new String(testHuman.getMove());
+        String receivedMessage = new String(testHuman.getMove(testList));
         testOutPutter.printOutput(receivedMessage);
         Assert.assertEquals(receivedMessage, testMessage);
 
     }
+
+    @Test public void itShouldRecurseUponReceivingImproperInput() {
+        OutputHandler testOutPutter = new OutputHandler(System.out);
+        // need a way to send a second message here
+        String testMessage = new String("5\n7");
+        InputHandler testInPutter = new InputHandler(new ByteArrayInputStream(testMessage.getBytes()));
+        String testMark = new String("X");
+        List<String> testList = new LinkedList<String>();
+        testList.add("1");
+        testList.add("2");
+        testList.add("7");
+        HumanPlayer testHuman = new HumanPlayer(testMark, testInPutter, testOutPutter);
+        String receivedMessage = new String(testHuman.getMove(testList));
+        testOutPutter.printOutput(receivedMessage);
+        //Assert.assertEquals("7", receivedMessage);
+    }
+
+
 }
