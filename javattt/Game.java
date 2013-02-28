@@ -5,13 +5,15 @@ import java.io.OutputStream;
 
 public class Game {
     public Board gameBoard;
-    public Printer gamePrinter;
+    private Printer gamePrinter;
     public Scorer gameScorer;
     public OutputHandler outPutter;
     public InputHandler inPutter;
     public HumanPlayer theHuman;
     public EasyComputer theComputer;
-    public Player currentPlayer;      // trying to do some Polymorphism magic
+    public Player currentPlayer;
+    public Player player1;
+    public Player player2;
 
     public Game(Board theBoard, OutputStream newOutStream, InputStream newInStream) {
         gameBoard = theBoard;
@@ -22,6 +24,8 @@ public class Game {
         theHuman = new HumanPlayer(new String("X"), inPutter, outPutter);
         theComputer = new EasyComputer();
         currentPlayer = theHuman;  // defaulting to this for now
+        player1 = theHuman;
+        player2 = theComputer;
 
     }
 
@@ -34,6 +38,8 @@ public class Game {
         theHuman = new HumanPlayer(new String("X"), inPutter, outPutter);
         theComputer = new EasyComputer();
         currentPlayer = theHuman;  // defaulting to this for now
+        player1 = theHuman;
+        player2 = theComputer;
     }
 
     public void printBoard() {
@@ -44,7 +50,17 @@ public class Game {
         return currentPlayer.getMove(gameBoard.availableSpots(gameBoard.getPositions()));
     }
 
+    public void placePlayerMove() {
+        gameBoard.placeMove(getPlayerMove(), currentPlayer.mark);
+    }
 
+    public void cyclePlayers() {
+        if (currentPlayer.equals(player1)) {
+            currentPlayer = player2;
+        } else {
+            currentPlayer = player1;
+        }
+    }
 
 
 }

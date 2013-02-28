@@ -49,33 +49,13 @@ public class Board {
     String[] positionsArray = gameHashMap.values().toArray(new String[0]);
     List<String> untakenSpots = new LinkedList<String>();
     for (String position : positionsArray) {
-      if (position.equals("X")){
+      if (position.equals("X") || position.equals("O")){
         // do nothing
       } else {
         untakenSpots.add(position);
       }
     }
     return untakenSpots;
-  }
-
-  // this should probably be in the Game class or GameSetup class or something
-  public static HashMap<String, String> createStandardBoard() {
-    HashMap<String, String> positions = new HashMap<String, String>();
-    positions.put("1", "1");
-    positions.put("2", "2");
-    positions.put("3", "3");
-    positions.put("4", "4");
-    positions.put("5", "5");
-    positions.put("6", "6");
-    positions.put("7", "7");
-    positions.put("8", "8");
-    positions.put("9", "9");
-    return positions;
-  }
-
-  // this thing
-  public static void main(String[] args) {
-      // nothing to see here
   }
 
 }

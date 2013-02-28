@@ -13,8 +13,7 @@ public class EasyComputerTest {
 
     @Before
     public void initialize() {
-        String playerMark = "X";
-        computerPlayer = new EasyComputer(playerMark);
+        computerPlayer = new EasyComputer();
     }
 
     @Test
