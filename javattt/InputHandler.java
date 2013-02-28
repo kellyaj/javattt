@@ -10,7 +10,7 @@ public class InputHandler {
         stdin = inputType;
     }
 
-    public String getInput() {
-        // do something to get input
-    }
+//    public String getInput() {
+//        // do something to get input
+//    }
 }

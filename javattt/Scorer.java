@@ -1,29 +1,34 @@
 package javattt;
 
 
+import java.util.HashMap;
+import java.util.Iterator;
 import java.util.List;
 
 public class Scorer {
     // there's got to be a better way to do this
-    public static List topRow;
-    public static List midRow;
-    public static List bottomRow;
-    public static List leftColumn;
-    public static List midColumn;
-    public static List rightColumn;
-    public static List ltrDiagonal;
-    public static List rtlDiagonal;
+    public static String[][] winCombos;
 
+    public Scorer() {
+        // nothing to do here?
+    }
+
+//    public boolean isGameWon(HashMap<String, String> gameBoard) {
+//        // compare array of taken positions to winCombo
+//
+//    }
 
     public static void main (String[] args) {
-        topRow.add("1");
-        topRow.add("2");
-        topRow.add("3");
-        midRow.add("4");
-        midRow.add("5");
-        midRow.add("6");
-
-
+        String[][] winCombos = {
+                { "1", "2", "3" },
+                { "4", "5", "6" },
+                { "7", "8", "9" },
+                { "1", "4", "7" },
+                { "2", "5", "8" },
+                { "3", "6", "9" },
+                { "1", "5", "9" },
+                { "3", "5", "7" }
+        };
     }
 
 }
