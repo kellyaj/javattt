@@ -2,19 +2,21 @@ package javattt;
 
 
 import java.io.InputStream;
+import java.util.Scanner;
 
 public class InputHandler {
-    InputStream stdin;
+    Scanner inputGrabber;
 
     public InputHandler(InputStream inputType){
-        stdin = inputType;
+        inputGrabber = new Scanner(inputType);
     }
 
     public InputHandler() {
-        stdin = System.in;
+        inputGrabber = new Scanner(System.in);
     }
 
-//    public String getInput() {
-//        // do something to get input
-//    }
+    public String getInput() {
+        String receivedInput = inputGrabber.nextLine();
+        return receivedInput;
+    }
 }

@@ -22,6 +22,7 @@ public class OutputHandlerTest {
         String testMessage = "Choose a move";
         final String realOutput = outContent.toString();
         Assert.assertEquals(realOutput, outPutter.printOutput(testMessage));
+        outContent.reset();
     }
 
     @Test
@@ -30,5 +31,6 @@ public class OutputHandlerTest {
         String testMessage = "Hello World";
         final String realOutput = outContent.toString();
         Assert.assertEquals(realOutput, outPutter.printOutput(testMessage));
+        outContent.reset();
     }
 }
