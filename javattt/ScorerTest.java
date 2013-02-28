@@ -9,7 +9,7 @@ public class ScorerTest {
     public void itShouldInitializeWithWinCombos() {
         Scorer gameScorer = new Scorer();
         String[] firstRow = gameScorer.winCombos[1];
-        String[] expectedRow = new String[]{"1", "2", "3"};
+        String[] expectedRow = {"1", "2", "3"};
         Assert.assertArrayEquals(expectedRow, firstRow);
     }
 }
