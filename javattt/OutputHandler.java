@@ -1,21 +1,24 @@
 package javattt;
 
 import java.io.OutputStream;
-import java.io.PrintWriter;
+import java.io.PrintStream;
+
 
 public class OutputHandler {
-    OutputStream stdout;
-    PrintWriter printWriter;
+    PrintStream streamPrinter;
 
     public OutputHandler(OutputStream outputType) {
-        stdout = outputType;
-    }
-    public OutputHandler() {
-        stdout = System.out;
+        streamPrinter = new PrintStream(outputType);
     }
 
-    public void printOutput (String outputData) {
-        printWriter.print(outputData);
+    public OutputHandler() {
+        streamPrinter = new PrintStream(System.out);
+    }
+
+                 // this feels wrong
+    public boolean printOutput(String outputData) {
+        streamPrinter.println(outputData);
+        return true;
     }
 
 

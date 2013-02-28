@@ -10,6 +10,10 @@ public class InputHandler {
         stdin = inputType;
     }
 
+    public InputHandler() {
+        stdin = System.in;
+    }
+
 //    public String getInput() {
 //        // do something to get input
 //    }
