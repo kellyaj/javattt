@@ -1,5 +1,6 @@
 package javattt;
 
+import java.util.List;
 import java.util.Scanner;
 
 public class HumanPlayer {
@@ -23,13 +24,28 @@ public class HumanPlayer {
   }
 
   // methods
-
-  public String getMove() {
+             // can I coerce this thing into allowing this?
+  public String getMove(List<String> availableMoves) {
     outPutter.printOutput("Please enter a number to choose a move: ");
+    displayAvailableMoves(availableMoves);
     String chosenMove = inPutter.getInput();
-    return chosenMove;
+      if (availableMoves.contains(chosenMove)) {
+          return chosenMove;
+      } else {
+          outPutter.printOutput("Incorrect Choice.");
+          this.getMove(availableMoves);
+      }
+     return chosenMove;
   }
 
+    public List displayAvailableMoves(List<String> availableMoves) {
+        String[] spotsArray = availableMoves.toArray(new String[0]);
+        String listString = "";
+        for (String s : spotsArray) {
+            listString += s + "\t";
+        }
+        outPutter.printOutput(listString);
+    }
 
   // void thing
   public static void main(String[] args) {
