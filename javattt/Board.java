@@ -14,6 +14,20 @@ public class Board {
     positions = startingSpots;
   }
 
+  public Board() {
+      HashMap<String, String> newPositions = new HashMap<String, String>();
+      newPositions.put("1", "1");
+      newPositions.put("2", "2");
+      newPositions.put("3", "3");
+      newPositions.put("4", "4");
+      newPositions.put("5", "5");
+      newPositions.put("6", "6");
+      newPositions.put("7", "7");
+      newPositions.put("8", "8");
+      newPositions.put("9", "9");
+      positions = newPositions;
+  }
+
   // methods
   public HashMap<String, String> getPositions() {
       return this.positions;

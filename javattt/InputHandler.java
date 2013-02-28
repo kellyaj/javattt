@@ -16,7 +16,6 @@ public class InputHandler {
     }
 
     public String getInput() {
-        String receivedInput = inputGrabber.nextLine();
-        return receivedInput;
+        return inputGrabber.nextLine();
     }
 }

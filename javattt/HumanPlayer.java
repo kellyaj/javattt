@@ -3,7 +3,7 @@ package javattt;
 import java.util.List;
 import java.util.Scanner;
 
-public class HumanPlayer {
+public class HumanPlayer extends Player {
 
   //fields
   public String mark;
@@ -13,12 +13,12 @@ public class HumanPlayer {
 
   // constructor
   public HumanPlayer(String playerMark, InputHandler NewInPutter, OutputHandler NewOutPutter) {
-      mark = playerMark;
+      super(playerMark);
       inPutter = NewInPutter;
       outPutter = NewOutPutter;
   }
   public HumanPlayer() {
-      mark = new String("X");
+      super(new String("X"));
       inPutter = new InputHandler(System.in);
       outPutter = new OutputHandler(System.out);
   }

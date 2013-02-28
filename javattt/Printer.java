@@ -6,8 +6,8 @@ public class Printer {
 
     public OutputHandler outPutter;
 
-  public Printer(OutputHandler outPutter) {
-      outPutter = outPutter;
+  public Printer(OutputHandler newOutPutter) {
+      outPutter = newOutPutter;
   }
 
   public Printer() {

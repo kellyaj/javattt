@@ -7,6 +7,14 @@ import java.util.List;
 public class BoardTest {
 
   public Board gameBoard;
+
+
+  @Test
+  public void itShouldConstructWithoutParams() {
+      gameBoard = new Board();
+      String testPos = gameBoard.getPositions().get("1");
+      Assert.assertEquals("1", testPos);
+  }
   @Before
   public void initialize() {
     HashMap<String, String> positions = new HashMap<String, String>();
