@@ -24,7 +24,7 @@ public class Game {
         gamePrinter = new Printer(outPutter);
         messagePutter = new MessageHandler(outPutter);
         gameScorer = new Scorer();
-        theHuman = new HumanPlayer(new String("X"), inPutter, outPutter);
+        theHuman = new HumanPlayer(new String("X"), inPutter, outPutter, messagePutter);
         theComputer = new EasyComputer();
         currentPlayer = theHuman;  // defaulting to this for now
         player1 = theHuman;
@@ -39,7 +39,7 @@ public class Game {
         messagePutter = new MessageHandler(outPutter);
         gamePrinter = new Printer(outPutter);
         gameScorer = new Scorer();
-        theHuman = new HumanPlayer(new String("X"), inPutter, outPutter);
+        theHuman = new HumanPlayer(new String("X"), inPutter, outPutter, messagePutter);
         theComputer = new EasyComputer();
         currentPlayer = theHuman;  // defaulting to this for now
         player1 = theHuman;
@@ -67,7 +67,7 @@ public class Game {
     }
 
     public boolean isGameOver() {
-        if (gameScorer.isGameWon(gameBoard.getPositions())){
+        if (gameScorer.isGameWon(gameBoard.getPositions())){                     // not functioning yet
             messagePutter.winnerMessage(currentPlayer.mark);
             return true;
         } else if (gameScorer.isGameStalemate(gameBoard.getPositions())) {
@@ -77,11 +77,11 @@ public class Game {
         return gameScorer.isGameOver(gameBoard.getPositions());
     }
 
-    public boolean isGameWon(HashMap<String, String> boardPositions) {
+    public boolean isGameWon(HashMap<String, String> boardPositions) {            // not functioning yet
         return gameScorer.isGameWon(boardPositions);
     }
 
-    public boolean isGameStalemate(HashMap<String, String> boardPositions) {
+    public boolean isGameStalemate(HashMap<String, String> boardPositions) {      // not functioning yet
         return gameScorer.isGameStalemate(boardPositions);
     }
 

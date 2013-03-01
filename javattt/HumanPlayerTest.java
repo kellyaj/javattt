@@ -14,8 +14,9 @@ public class HumanPlayerTest {
     public void itShouldInitializeWithTheProperFields() {
         OutputHandler testOutPutter = new OutputHandler(System.out);
         InputHandler testInPutter = new InputHandler(System.in);
+        MessageHandler testMessenger =  new MessageHandler(testOutPutter);
         String testMark = "X";
-        HumanPlayer testHuman = new HumanPlayer(testMark, testInPutter, testOutPutter);
+        HumanPlayer testHuman = new HumanPlayer(testMark, testInPutter, testOutPutter, testMessenger);
         //Assert.assertEquals("X", testHuman.mark);
     }
 
@@ -29,13 +30,14 @@ public class HumanPlayerTest {
     @Test
     public void itShouldProperlyGetInput() {
         OutputHandler testOutPutter = new OutputHandler(System.out);
+        MessageHandler testMessenger =  new MessageHandler(testOutPutter);
         String testMessage = "Water";
         InputHandler testInPutter = new InputHandler(new ByteArrayInputStream(testMessage.getBytes()));
         String testMark = "X";
         List<String> testList = new LinkedList<String>();
         testList.add("Water");
         testList.add("Coffee");
-        HumanPlayer testHuman = new HumanPlayer(testMark, testInPutter, testOutPutter);
+        HumanPlayer testHuman = new HumanPlayer(testMark, testInPutter, testOutPutter, testMessenger);
         String receivedMessage = new String(testHuman.getMove(testList));
         testOutPutter.printOutput(receivedMessage);
         Assert.assertEquals(receivedMessage, testMessage);
@@ -45,6 +47,7 @@ public class HumanPlayerTest {
     @Test public void itShouldRecurseUponReceivingImproperInput() {
         OutputHandler testOutPutter = new OutputHandler(System.out);
         // need a way to send a second message here
+        MessageHandler testMessenger =  new MessageHandler(testOutPutter);
         String testMessage = new String("5\n7");
         InputHandler testInPutter = new InputHandler(new ByteArrayInputStream(testMessage.getBytes()));
         String testMark = "X";
@@ -52,7 +55,7 @@ public class HumanPlayerTest {
         testList.add("1");
         testList.add("2");
         testList.add("7");
-        HumanPlayer testHuman = new HumanPlayer(testMark, testInPutter, testOutPutter);
+        HumanPlayer testHuman = new HumanPlayer(testMark, testInPutter, testOutPutter, testMessenger);
         String receivedMessage = new String(testHuman.getMove(testList));
         testOutPutter.printOutput(receivedMessage);
         //Assert.assertEquals("7", receivedMessage);

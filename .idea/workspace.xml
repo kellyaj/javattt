@@ -3,8 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" id="b7a5fd5e-05bd-4d6e-bc34-6002083ad1f2" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/javattt/Game.java" afterPath="$PROJECT_DIR$/javattt/Game.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/javattt/HumanPlayer.java" afterPath="$PROJECT_DIR$/javattt/HumanPlayer.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/javattt/Scorer.java" afterPath="$PROJECT_DIR$/javattt/Scorer.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/javattt/HumanPlayerTest.java" afterPath="$PROJECT_DIR$/javattt/HumanPlayerTest.java" />
     </list>
     <ignored path="javattt.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -23,8 +22,8 @@
     <file path="/InputHandlerTest.java" changelist="b7a5fd5e-05bd-4d6e-bc34-6002083ad1f2" time="1362077834936" ignored="false" />
     <file path="/OutputHandlerTest.java" changelist="b7a5fd5e-05bd-4d6e-bc34-6002083ad1f2" time="1362076961310" ignored="false" />
     <file path="/HumanPlayer.java" changelist="b7a5fd5e-05bd-4d6e-bc34-6002083ad1f2" time="1362161255693" ignored="false" />
-    <file path="/HumanPlayerTest.java" changelist="b7a5fd5e-05bd-4d6e-bc34-6002083ad1f2" time="1362089494535" ignored="false" />
-    <file path="/Game.java" changelist="b7a5fd5e-05bd-4d6e-bc34-6002083ad1f2" time="1362158554132" ignored="false" />
+    <file path="/HumanPlayerTest.java" changelist="b7a5fd5e-05bd-4d6e-bc34-6002083ad1f2" time="1362169318637" ignored="false" />
+    <file path="/Game.java" changelist="b7a5fd5e-05bd-4d6e-bc34-6002083ad1f2" time="1362169169327" ignored="false" />
     <file path="/Player.java" changelist="b7a5fd5e-05bd-4d6e-bc34-6002083ad1f2" time="1362086245783" ignored="false" />
     <file path="/GameTest.java" changelist="b7a5fd5e-05bd-4d6e-bc34-6002083ad1f2" time="1362088634437" ignored="false" />
     <file path="/MessageHandler.java" changelist="b7a5fd5e-05bd-4d6e-bc34-6002083ad1f2" time="1362159057835" ignored="false" />
@@ -89,7 +88,7 @@
       <file leaf-file-name="Game.java" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/javattt/Game.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="10" column="56" selection-start="248" selection-end="248" vertical-scroll-proportion="0.0">
+            <state line="13" column="56" selection-start="356" selection-end="356" vertical-scroll-proportion="0.0">
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -97,30 +96,23 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="MessageHandler.java" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="HumanPlayerTest.java" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/javattt/HumanPlayerTest.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="10" column="78" selection-start="212" selection-end="212" vertical-scroll-proportion="0.32051283">
+              <folding>
+                <element signature="imports" expanded="true" />
+                <element signature="e#1364#1372#0" expanded="true" />
+                <element signature="e#2229#2237#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="MessageHandler.java" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/javattt/MessageHandler.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="8" column="81" selection-start="181" selection-end="181" vertical-scroll-proportion="0.26966292">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="OutputHandler.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/javattt/OutputHandler.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="6" column="57" selection-start="105" selection-end="105" vertical-scroll-proportion="0.0">
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Printer.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/javattt/Printer.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="18" column="24" selection-start="475" selection-end="475" vertical-scroll-proportion="0.0">
+            <state line="9" column="149" selection-start="182" selection-end="182" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -210,11 +202,11 @@
         <option value="$PROJECT_DIR$/javattt/Board.java" />
         <option value="$PROJECT_DIR$/javattt/GameTest.java" />
         <option value="$PROJECT_DIR$/javattt/ScorerTest.java" />
-        <option value="$PROJECT_DIR$/javattt/HumanPlayerTest.java" />
         <option value="$PROJECT_DIR$/javattt/Scorer.java" />
-        <option value="$PROJECT_DIR$/javattt/Game.java" />
         <option value="$PROJECT_DIR$/javattt/MessageHandler.java" />
         <option value="$PROJECT_DIR$/javattt/HumanPlayer.java" />
+        <option value="$PROJECT_DIR$/javattt/Game.java" />
+        <option value="$PROJECT_DIR$/javattt/HumanPlayerTest.java" />
       </list>
     </option>
   </component>
@@ -602,7 +594,7 @@
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.19359533" sideWeight="0.67027026" order="0" side_tool="false" content_ui="combo" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.32972974" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.32972974" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
@@ -714,17 +706,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/javattt/HumanPlayerTest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="24" column="94" selection-start="782" selection-end="782" vertical-scroll-proportion="0.7692308">
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#1199#1207#0" expanded="true" />
-            <element signature="e#1974#1982#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/javattt/ScorerTest.java">
       <provider selected="true" editor-type-id="text-editor">
         <state line="10" column="14" selection-start="212" selection-end="212" vertical-scroll-proportion="0.0">
@@ -777,12 +758,28 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/javattt/Game.java">
+    <entry file="file://$PROJECT_DIR$/javattt/OutputHandler.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="10" column="56" selection-start="248" selection-end="248" vertical-scroll-proportion="0.0">
+        <state line="6" column="57" selection-start="105" selection-end="105" vertical-scroll-proportion="0.0">
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/javattt/Game.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="13" column="56" selection-start="356" selection-end="356" vertical-scroll-proportion="0.0">
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/javattt/MessageHandler.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="9" column="149" selection-start="182" selection-end="182" vertical-scroll-proportion="0.0">
+          <folding />
         </state>
       </provider>
     </entry>
@@ -795,19 +792,14 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/javattt/OutputHandler.java">
+    <entry file="file://$PROJECT_DIR$/javattt/HumanPlayerTest.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="6" column="57" selection-start="105" selection-end="105" vertical-scroll-proportion="0.0">
+        <state line="10" column="78" selection-start="212" selection-end="212" vertical-scroll-proportion="0.32051283">
           <folding>
             <element signature="imports" expanded="true" />
+            <element signature="e#1364#1372#0" expanded="true" />
+            <element signature="e#2229#2237#0" expanded="true" />
           </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/javattt/MessageHandler.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="8" column="81" selection-start="181" selection-end="181" vertical-scroll-proportion="0.26966292">
-          <folding />
         </state>
       </provider>
     </entry>
