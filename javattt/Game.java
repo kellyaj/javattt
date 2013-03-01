@@ -2,6 +2,7 @@ package javattt;
 
 import java.io.InputStream;
 import java.io.OutputStream;
+import java.util.HashMap;
 
 public class Game {
     public Board gameBoard;
@@ -9,6 +10,7 @@ public class Game {
     public Scorer gameScorer;
     public OutputHandler outPutter;
     public InputHandler inPutter;
+    public MessageHandler messagePutter;
     public HumanPlayer theHuman;
     public EasyComputer theComputer;
     public Player currentPlayer;
@@ -20,6 +22,7 @@ public class Game {
         outPutter = new OutputHandler(newOutStream);
         inPutter = new InputHandler(newInStream);
         gamePrinter = new Printer(outPutter);
+        messagePutter = new MessageHandler(outPutter);
         gameScorer = new Scorer();
         theHuman = new HumanPlayer(new String("X"), inPutter, outPutter);
         theComputer = new EasyComputer();
@@ -33,6 +36,7 @@ public class Game {
         gameBoard = new Board();
         outPutter = new OutputHandler(System.out);
         inPutter = new InputHandler(System.in);
+        messagePutter = new MessageHandler(outPutter);
         gamePrinter = new Printer(outPutter);
         gameScorer = new Scorer();
         theHuman = new HumanPlayer(new String("X"), inPutter, outPutter);
@@ -61,6 +65,27 @@ public class Game {
             currentPlayer = player1;
         }
     }
+
+    public boolean isGameOver() {
+        if (gameScorer.isGameWon(gameBoard.getPositions())){
+            messagePutter.winnerMessage(currentPlayer.mark);
+            return true;
+        } else if (gameScorer.isGameStalemate(gameBoard.getPositions())) {
+            messagePutter.stalemateMessage();
+            return true;
+        }
+        return gameScorer.isGameOver(gameBoard.getPositions());
+    }
+
+    public boolean isGameWon(HashMap<String, String> boardPositions) {
+        return gameScorer.isGameWon(boardPositions);
+    }
+
+    public boolean isGameStalemate(HashMap<String, String> boardPositions) {
+        return gameScorer.isGameStalemate(boardPositions);
+    }
+
+
 
 
 }

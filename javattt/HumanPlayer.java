@@ -9,30 +9,33 @@ public class HumanPlayer extends Player {
   public String mark;
   public InputHandler inPutter;
   public OutputHandler outPutter;
+  public MessageHandler messagePutter;
 
 
   // constructor
-  public HumanPlayer(String playerMark, InputHandler NewInPutter, OutputHandler NewOutPutter) {
+  public HumanPlayer(String playerMark, InputHandler newInPutter, OutputHandler newOutPutter, MessageHandler newMessagePutter) {
       super(playerMark);
-      inPutter = NewInPutter;
-      outPutter = NewOutPutter;
+      inPutter = newInPutter;
+      outPutter = newOutPutter;
+      messagePutter = newMessagePutter;
   }
   public HumanPlayer() {
       super(new String("X"));
       inPutter = new InputHandler(System.in);
       outPutter = new OutputHandler(System.out);
+      messagePutter = new MessageHandler();
   }
 
   // methods
 
   public String getMove(List<String> availableMoves) {
-    outPutter.printOutput("Please enter a number to choose a move: ");
+    messagePutter.chooseMovePrompt();
     displayAvailableMoves(availableMoves);
     String chosenMove = inPutter.getInput();
       if (availableMoves.contains(chosenMove)) {
           return chosenMove;
       } else {
-          outPutter.printOutput("Incorrect Choice.");
+          messagePutter.invalidMoveMessage();
           this.getMove(availableMoves);
       }
      return chosenMove;

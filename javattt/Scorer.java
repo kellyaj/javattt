@@ -13,10 +13,18 @@ public class Scorer {
         // nothing to do here?
     }
 
-//    public boolean isGameWon(HashMap<String, String> gameBoard) {
-//        // compare array of taken positions to winCombo
-//
-//    }
+    public boolean isGameWon(HashMap<String, String> gameBoard) {
+        // compare array of taken positions to winCombo
+      return true;
+    }
+
+    public boolean isGameStalemate(HashMap<String, String> gameBoard) {
+        return true;
+    }
+
+    public boolean isGameOver(HashMap<String, String> gameBoard) {
+        return true;
+    }
 
     public static void main (String[] args) {
         String[][] winCombos = {
