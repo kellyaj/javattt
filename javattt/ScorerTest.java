@@ -4,6 +4,8 @@ import org.junit.Assert;
 import org.junit.Test;
 
 import java.util.HashMap;
+import java.util.LinkedList;
+import java.util.List;
 
 public class ScorerTest {
 
@@ -83,5 +85,18 @@ public class ScorerTest {
         Assert.assertFalse(gameScorer.isGameWon(positions));
     }
 
+    @Test
+    public void itShouldReturnTrueIfStalemate() {
+        List<String> availableSpots = new LinkedList<String>();
+        Scorer gameScorer = new Scorer();
+        Assert.assertTrue(gameScorer.isGameStalemate(availableSpots));
+    }
 
+    @Test
+    public void itShouldReturnFalseIfNotStalemate() {
+        List<String> availableSpots = new LinkedList<String>();
+        availableSpots.add("1");
+        Scorer gameScorer = new Scorer();
+        Assert.assertFalse(gameScorer.isGameStalemate(availableSpots));
+    }
 }

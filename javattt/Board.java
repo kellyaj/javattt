@@ -45,8 +45,8 @@ public class Board {
     return true;
   }
 
-  public List availableSpots(HashMap<String, String> gameHashMap) {
-    String[] positionsArray = gameHashMap.values().toArray(new String[0]);
+  public List availableSpots() {
+    String[] positionsArray = this.positions.values().toArray(new String[0]);
     List<String> untakenSpots = new LinkedList<String>();
     for (String position : positionsArray) {
       if (position.equals("X") || position.equals("O")){
@@ -57,5 +57,6 @@ public class Board {
     }
     return untakenSpots;
   }
+
 
 }

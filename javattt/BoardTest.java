@@ -50,7 +50,7 @@ public class BoardTest {
 
   @Test
    public void itShouldReturnAListOfAvailableSpots() {
-    List untakenSpots = gameBoard.availableSpots(gameBoard.getPositions());
+    List untakenSpots = gameBoard.availableSpots();
     int listSize = untakenSpots.size();
     Assert.assertEquals(listSize, 9);
    }

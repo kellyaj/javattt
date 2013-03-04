@@ -24,8 +24,6 @@ public class Scorer {
     }
 
     public boolean isGameWon(HashMap<String, String> gameBoard) {
-        // compare array of taken positions to winCombo
-        // check if each row value == currentplayer.mark
         for (String[] row : winCombos) {
             ArrayList<String> currentRow = new ArrayList<String>();
             for (String i : row) {
@@ -40,13 +38,8 @@ public class Scorer {
       return false;
     }
 
-    public boolean isGameStalemate(HashMap<String, String> gameBoard) {
-        return true;
+    public boolean isGameStalemate(List<String> availableSpots) {
+        return availableSpots.size() == 0;
     }
-
-    public boolean isGameOver(HashMap<String, String> gameBoard) {
-        return true;
-    }
-
 
 }

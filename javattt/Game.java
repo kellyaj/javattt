@@ -51,7 +51,7 @@ public class Game {
     }
 
     public String getPlayerMove() {
-        return currentPlayer.getMove(gameBoard.availableSpots(gameBoard.getPositions()));
+        return currentPlayer.getMove(gameBoard.availableSpots());
     }
 
     public void placePlayerMove() {
@@ -67,22 +67,22 @@ public class Game {
     }
 
     public boolean isGameOver() {
-        if (gameScorer.isGameWon(gameBoard.getPositions())){                     // not functioning yet
+        if (gameScorer.isGameWon(gameBoard.getPositions())){
             messagePutter.winnerMessage(currentPlayer.mark);
             return true;
-        } else if (gameScorer.isGameStalemate(gameBoard.getPositions())) {
+        } else if (gameScorer.isGameStalemate(gameBoard.availableSpots())) {
             messagePutter.stalemateMessage();
             return true;
         }
-        return gameScorer.isGameOver(gameBoard.getPositions());
+        return false;
     }
 
-    public boolean isGameWon(HashMap<String, String> boardPositions) {            // not functioning yet
+    public boolean isGameWon(HashMap<String, String> boardPositions) {
         return gameScorer.isGameWon(boardPositions);
     }
 
-    public boolean isGameStalemate(HashMap<String, String> boardPositions) {      // not functioning yet
-        return gameScorer.isGameStalemate(boardPositions);
+    public boolean isGameStalemate() {
+        return gameScorer.isGameStalemate(gameBoard.availableSpots());
     }
 
 
