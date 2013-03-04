@@ -27,4 +27,5 @@ public class MessageHandler {
     public void invalidMoveMessage() {
         outPutter.printOutput("Invalid move.");
     }
+
 }
