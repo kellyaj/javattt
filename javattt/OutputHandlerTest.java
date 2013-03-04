@@ -1,6 +1,7 @@
 package javattt;
 
 import junit.framework.Assert;
+import org.junit.After;
 import org.junit.Before;
 import org.junit.Test;
 
@@ -16,21 +17,24 @@ public class OutputHandlerTest {
         System.setOut(new PrintStream(outContent));
     }
 
+    @After
+    public void cleanStream() {
+        outContent.reset();
+    }
+
     @Test
     public void itShouldOutputSomething() {
         OutputHandler outPutter = new OutputHandler(System.out);
-        String testMessage = "Choose a move";
-        final String realOutput = outContent.toString();
-        Assert.assertEquals(realOutput, outPutter.printOutput(testMessage));
-        outContent.reset();
+        String testMessage = "Choose a move: ";
+        outPutter.printOutput(testMessage);
+        Assert.assertEquals(outContent.toString(), testMessage);
     }
 
     @Test
     public void itShouldDefaultToSystemOut() {
         OutputHandler outPutter = new OutputHandler();
         String testMessage = "Hello World";
-        final String realOutput = outContent.toString();
-        Assert.assertEquals(realOutput, outPutter.printOutput(testMessage));
-        outContent.reset();
+        outPutter.printOutput(testMessage);
+        Assert.assertEquals(outContent.toString(), testMessage);
     }
 }

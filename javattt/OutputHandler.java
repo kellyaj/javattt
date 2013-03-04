@@ -15,10 +15,9 @@ public class OutputHandler {
         streamPrinter = new PrintStream(System.out);
     }
 
-                 // this feels wrong to have it return a boolean, rather than void
-    public boolean printOutput(String outputData) {
-        streamPrinter.println(outputData);
-        return true;
+
+    public void printOutput(String outputData) {
+        streamPrinter.print(outputData);
     }
 
 

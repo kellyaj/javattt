@@ -42,7 +42,7 @@ public class HumanPlayer extends Player {
   }
 
     public void displayAvailableMoves(List<String> availableMoves) {
-        String[] spotsArray = availableMoves.toArray(new String[0]);
+        String[] spotsArray = availableMoves.toArray(new String[0]);     // should I use ArrayList here? Array size issue
         String listString = "";
         for (String s : spotsArray) {
             listString += s + "\t";
