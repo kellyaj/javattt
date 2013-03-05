@@ -2,9 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="b7a5fd5e-05bd-4d6e-bc34-6002083ad1f2" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/javattt/Game.java" afterPath="$PROJECT_DIR$/javattt/Game.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/javattt/MinimaxComputer.java" afterPath="$PROJECT_DIR$/javattt/MinimaxComputer.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/javattt/Scorer.java" afterPath="$PROJECT_DIR$/javattt/Scorer.java" />
     </list>
     <ignored path="javattt.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -29,7 +27,7 @@
     <file path="/GameTest.java" changelist="b7a5fd5e-05bd-4d6e-bc34-6002083ad1f2" time="1362088634437" ignored="false" />
     <file path="/MessageHandler.java" changelist="b7a5fd5e-05bd-4d6e-bc34-6002083ad1f2" time="1362517037413" ignored="false" />
     <file path="/GameLoop.java" changelist="b7a5fd5e-05bd-4d6e-bc34-6002083ad1f2" time="1362518612290" ignored="false" />
-    <file path="/MinimaxComputer.java" changelist="b7a5fd5e-05bd-4d6e-bc34-6002083ad1f2" time="1362522276404" ignored="false" />
+    <file path="/MinimaxComputer.java" changelist="b7a5fd5e-05bd-4d6e-bc34-6002083ad1f2" time="1362522951665" ignored="false" />
     <file path="/MinimaxComputerTest.java" changelist="b7a5fd5e-05bd-4d6e-bc34-6002083ad1f2" time="1362437248154" ignored="false" />
     <file path="/GameLoopTest.java" changelist="b7a5fd5e-05bd-4d6e-bc34-6002083ad1f2" time="1362519295069" ignored="false" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -104,11 +102,10 @@
       <file leaf-file-name="MinimaxComputer.java" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/javattt/MinimaxComputer.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="45" column="60" selection-start="1483" selection-end="1483" vertical-scroll-proportion="0.53932583">
+            <state line="19" column="68" selection-start="364" selection-end="364" vertical-scroll-proportion="0.30337077">
               <folding>
-                <element signature="imports" expanded="true" />
-                <element signature="e#1095#1111#0" expanded="true" />
-                <element signature="e#1888#1904#0" expanded="true" />
+                <element signature="e#1142#1158#0" expanded="true" />
+                <element signature="e#1935#1951#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -828,11 +825,10 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/javattt/MinimaxComputer.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="45" column="60" selection-start="1483" selection-end="1483" vertical-scroll-proportion="0.53932583">
+        <state line="19" column="68" selection-start="364" selection-end="364" vertical-scroll-proportion="0.30337077">
           <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#1095#1111#0" expanded="true" />
-            <element signature="e#1888#1904#0" expanded="true" />
+            <element signature="e#1142#1158#0" expanded="true" />
+            <element signature="e#1935#1951#0" expanded="true" />
           </folding>
         </state>
       </provider>

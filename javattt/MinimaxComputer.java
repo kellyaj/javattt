@@ -1,9 +1,6 @@
 package javattt;
 
-import java.util.HashMap;
-import java.util.Iterator;
-import java.util.List;
-import java.util.Set;
+import java.util.*;
 
 public class MinimaxComputer extends Player {
 
@@ -24,8 +21,9 @@ public class MinimaxComputer extends Player {
     public String getMove(Board gameBoard) {
         String currentPlayer = this.mark;
         int startingDepth = 0;
-        this.miniMaxMove(gameBoard, currentPlayer, startingDepth);
-        return "1"; //placeholder
+        HashMap<Double, String> miniMaxResult= this.miniMaxMove(gameBoard, currentPlayer, startingDepth);
+        String[] recommendedMove = miniMaxResult.entrySet().toArray(new String[]{});
+        return recommendedMove[0];
     }
 
     public HashMap<Double, String> miniMaxMove(Board gameBoard, String currentPlayer, int depth) {
