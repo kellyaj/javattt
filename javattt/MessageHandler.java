@@ -28,4 +28,8 @@ public class MessageHandler {
         outPutter.printOutput("Invalid move.");
     }
 
+    public void playAgainMessage() {
+        outPutter.printOutput("Would you like to play again? Type 'yes' or 'no'");
+    }
+
 }

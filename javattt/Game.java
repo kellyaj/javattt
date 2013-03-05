@@ -17,7 +17,7 @@ public class Game {
     public Player player1;
     public Player player2;
 
-    public Game(Board theBoard, OutputStream newOutStream, InputStream newInStream) {
+    public Game(Board theBoard,InputStream newInStream, OutputStream newOutStream) {
         gameBoard = theBoard;
         outPutter = new OutputHandler(newOutStream);
         inPutter = new InputHandler(newInStream);

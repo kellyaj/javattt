@@ -35,7 +35,7 @@ public class MinimaxComputer extends Player {
         // start iterating over each available spot and doing the recursion
         if (spotScore > highestScore) {
             primeMove = "temp"; //the spot iterated over
-            highestScore = "othertemp"; //
+            highestScore = -1; //
         }
         return "1";  //placeholder
 

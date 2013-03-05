@@ -29,7 +29,7 @@ public class Scorer {
             for (String i : row) {
                 currentRow.add(gameBoard.get(i));
             }
-            if (currentRow.get(0).equals(currentRow.get(1)) || currentRow.get(1).equals(currentRow.get(2))) {
+            if (currentRow.get(0).equals(currentRow.get(1)) && currentRow.get(1).equals(currentRow.get(2))) {
                 return true;
             } else {
                 currentRow.clear();
