@@ -42,4 +42,15 @@ public class Scorer {
         return availableSpots.size() == 0;
     }
 
+    public boolean isGameOver(HashMap<String, String> gameBoard, List<String> availableSpots) {
+        if (isGameWon(gameBoard)) {
+            return true;
+        } else if (isGameStalemate(availableSpots)) {
+            return true;
+        }
+        return false;
+    }
+
+
+
 }

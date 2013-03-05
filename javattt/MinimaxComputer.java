@@ -1,6 +1,9 @@
 package javattt;
 
+import java.util.HashMap;
+import java.util.Iterator;
 import java.util.List;
+import java.util.Set;
 
 public class MinimaxComputer extends Player {
 
@@ -25,19 +28,33 @@ public class MinimaxComputer extends Player {
         return "1"; //placeholder
     }
 
-    public String miniMaxMove(Board gameBoard, String currentPlayer, int depth) {
-        int spotScore = -1;
+    public HashMap<Double, String> miniMaxMove(Board gameBoard, String currentPlayer, int depth) {
+        double spotScore = -1;
         String primeMove = null;
-        int highestScore = -1;
+        double highestScore = -1;
         depth = depth;       // need a way to depth = 0 as a param like in Ruby
-        // return scoreMove(...) if gameScorer.gameIsOver
-        depth++;
-        // start iterating over each available spot and doing the recursion
-        if (spotScore > highestScore) {
-            primeMove = "temp"; //the spot iterated over
-            highestScore = -1; //
+        if (gameScorer.isGameOver(gameBoard.getPositions(), gameBoard.availableSpots())) {
+            HashMap<Double, String> scoreMap = new HashMap<Double, String>();
+            scoreMap.put(scoreMove(gameBoard, currentPlayer, depth), null);
+            return scoreMap;
         }
-        return "1";  //placeholder
+        depth++;
+        List currentList = gameBoard.availableSpots();
+        Iterator itr = currentList.iterator();
+        while (itr.hasNext()) {
+            String spot = itr.next().toString();
+            gameBoard.placeMove(spot, currentPlayer);
+            Set currentSet = miniMaxMove(gameBoard, cyclePlayers(currentPlayer), depth).keySet();
+            Double spotScore = currentSet.toArray();
+            gameBoard.placeMove(spot, spot);
+            if (spotScore > highestScore) {
+                primeMove = spot;
+                highestScore = spotScore;
+            }
+        }
+        HashMap<Double, String> moveRecommendation = new HashMap<Double, String>();
+        moveRecommendation.put(highestScore, primeMove);
+        return moveRecommendation;
 
     }
 
