@@ -24,15 +24,17 @@ public class GameLoop {
     public GameLoop() {
         inPutter = new InputHandler(System.in);
         outPutter = new OutputHandler(System.out);
+        inPutterStream = System.in;
+        outPutterStream = System.out;
         currentGame = new Game();
         messagePutter = new MessageHandler(outPutter);
     }
 
-    public void start_game(Game currentGame) {
-        this.play_game(currentGame);
+    public void startGame(Game currentGame) {
+        this.playGame(currentGame);
     }
 
-    public void play_game(Game theGame) {
+    public void playGame(Game theGame) {
         while (!theGame.isGameOver()) {
               theGame.printBoard();
               theGame.placePlayerMove();
@@ -43,7 +45,7 @@ public class GameLoop {
               theGame.cyclePlayers();
         }
         if (playAgain()) {
-            play_game(createGame(inPutterStream, outPutterStream));
+            playGame(createGame(inPutterStream, outPutterStream));
         }
     }
 
