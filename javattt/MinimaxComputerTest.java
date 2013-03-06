@@ -16,14 +16,6 @@ public class MinimaxComputerTest {
 
     }
 
-//    @Test
-//    public void itShouldChooseAnyMove() {
-//            String playerMark = "O";
-//            Board testBoard = new Board();
-//            MinimaxComputer testComputer = new MinimaxComputer(playerMark);
-//            Assert.assertEquals("5", testComputer.getMove(testBoard));
-//    }
-
     @Test
     public void itShouldChooseObviousWin() {
         String playerMark = "X";
@@ -113,5 +105,23 @@ public class MinimaxComputerTest {
         Board gameBoard = new Board(positions);
         MinimaxComputer testComputer = new MinimaxComputer(playerMark);
         Assert.assertEquals("6", testComputer.getMove(gameBoard));
+    }
+
+    @Test
+    public void itShouldChooseAWinOverABlock() {
+        String playerMark = "O";
+        HashMap<String, String> positions = new HashMap<String, String>();
+        positions.put("1", "X");
+        positions.put("2", "X");
+        positions.put("3", "3");
+        positions.put("4", "4");
+        positions.put("5", "X");
+        positions.put("6", "6");
+        positions.put("7", "O");
+        positions.put("8", "O");
+        positions.put("9", "9");
+        Board gameBoard = new Board(positions);
+        MinimaxComputer testComputer = new MinimaxComputer(playerMark);
+        Assert.assertEquals("9", testComputer.getMove(gameBoard));
     }
 }

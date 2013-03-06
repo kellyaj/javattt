@@ -50,9 +50,6 @@ public class Board {
   public List availableSpots() {
     String[] positionsArray = this.positions.values().toArray(new String[0]);
     List<String> untakenSpots = new LinkedList<String>();
-      // problem when positionsArray is empty?
-      //ArrayList<String> testList = new ArrayList<String>(Arrays.asList(positionsArray));
-      //if (testList.size() > 0) {
         for (String position : positionsArray) {
             if (position.equals(xPlayer)) {
               // do nothing
@@ -62,7 +59,6 @@ public class Board {
             untakenSpots.add(position);
             }
         }
-      //}
     return untakenSpots;
   }
 

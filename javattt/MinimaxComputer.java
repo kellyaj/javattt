@@ -44,7 +44,6 @@ public class MinimaxComputer extends Player {
             return scoreMap;
         }
         depth++;
-
         List currentList = gameBoard.availableSpots();
         Iterator itr = currentList.iterator();
         while (itr.hasNext()) {
