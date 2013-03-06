@@ -54,7 +54,6 @@ public class Board {
       //ArrayList<String> testList = new ArrayList<String>(Arrays.asList(positionsArray));
       //if (testList.size() > 0) {
         for (String position : positionsArray) {
-            System.out.println(position);
             if (position.equals(xPlayer)) {
               // do nothing
             } else if (position.equals(oPlayer)){

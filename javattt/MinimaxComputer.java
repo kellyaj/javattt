@@ -14,11 +14,13 @@ public class MinimaxComputer extends Player {
         gameScorer = new Scorer();
         xPlayer = "X";
         oPlayer = "O";
+        this.mark = playerMark;
 
     }
 
     public MinimaxComputer() {
         super(new String("O"));
+        this.mark = "O";
         gameScorer = new Scorer();
     }
 
@@ -26,6 +28,7 @@ public class MinimaxComputer extends Player {
         String currentPlayer = this.mark;
         int startingDepth = 0;
         HashMap<Double, String> miniMaxResult= this.miniMaxMove(gameBoard, currentPlayer, startingDepth);
+        System.out.println("ATTENTION, the answer is " + miniMaxResult);
         String[] recommendedMove = miniMaxResult.entrySet().toArray(new String[]{});
         return recommendedMove[0];
     }
@@ -41,12 +44,13 @@ public class MinimaxComputer extends Player {
             return scoreMap;
         }
         depth++;
+
         List currentList = gameBoard.availableSpots();
         Iterator itr = currentList.iterator();
         while (itr.hasNext()) {
             String spot = itr.next().toString();
             gameBoard.placeMove(spot, currentPlayer);
-            Set currentSet = miniMaxMove(gameBoard, cyclePlayers(currentPlayer), depth).keySet();
+            Set currentSet = miniMaxMove(gameBoard, cyclePlayers(currentPlayer), depth).keySet();   // this was negative in Ruby
             Iterator newItr = currentSet.iterator();
             String tempSpotScore = "";
             while (newItr.hasNext()) {
@@ -67,7 +71,7 @@ public class MinimaxComputer extends Player {
 
     public double scoreMove(Board gameBoard, String currentPlayer, int depth) {
         if (gameScorer.isGameWon(gameBoard.getPositions())) {
-            return (1.0 / -depth);
+            return (1.0 / depth);         // this was negative in Ruby
         } else {
             return 0;
         }
