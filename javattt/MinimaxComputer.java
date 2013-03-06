@@ -6,10 +6,14 @@ public class MinimaxComputer extends Player {
 
     public String mark;
     private Scorer gameScorer;
+    private String xPlayer;
+    private String oPlayer;
 
     public MinimaxComputer(String playerMark) {
         super(playerMark);
         gameScorer = new Scorer();
+        xPlayer = "X";
+        oPlayer = "O";
 
     }
 
@@ -27,7 +31,7 @@ public class MinimaxComputer extends Player {
     }
 
     public HashMap<Double, String> miniMaxMove(Board gameBoard, String currentPlayer, int depth) {
-        double spotScore = -1;
+        //double spotScore = -1;
         String primeMove = null;
         double highestScore = -1;
         depth = depth;       // need a way to depth = 0 as a param like in Ruby
@@ -43,7 +47,12 @@ public class MinimaxComputer extends Player {
             String spot = itr.next().toString();
             gameBoard.placeMove(spot, currentPlayer);
             Set currentSet = miniMaxMove(gameBoard, cyclePlayers(currentPlayer), depth).keySet();
-            Double spotScore = currentSet.toArray();
+            Iterator newItr = currentSet.iterator();
+            String tempSpotScore = "";
+            while (newItr.hasNext()) {
+                tempSpotScore = newItr.next().toString();
+            }
+            Double spotScore = Double.parseDouble(tempSpotScore);
             gameBoard.placeMove(spot, spot);
             if (spotScore > highestScore) {
                 primeMove = spot;
@@ -65,10 +74,10 @@ public class MinimaxComputer extends Player {
     }
 
     public String cyclePlayers(String currentPlayer) {
-        if (currentPlayer.equals("X")) {
-            return "O";
+        if (currentPlayer == xPlayer) {
+            return oPlayer;
         } else {
-            return "X";
+            return xPlayer;
         }
     }
 

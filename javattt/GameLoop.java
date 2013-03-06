@@ -30,24 +30,24 @@ public class GameLoop {
         messagePutter = new MessageHandler(outPutter);
     }
 
-    public void startGame(Game currentGame) {
-        this.playGame(currentGame);
-    }
-
-    public void playGame(Game theGame) {
-        while (!theGame.isGameOver()) {
-              theGame.printBoard();
-              theGame.placePlayerMove();
-              if (theGame.isGameOver()) {
-                  theGame.printBoard();
-                  break;
-              }
-              theGame.cyclePlayers();
-        }
-        if (playAgain()) {
-            playGame(createGame(inPutterStream, outPutterStream));
-        }
-    }
+//    public void startGame(Game currentGame) {
+//        this.playGame(currentGame);
+//    }
+//
+//    public void playGame(Game theGame) {
+//        while (!theGame.isGameOver()) {
+//              theGame.printBoard();
+//              theGame.placePlayerMove();
+//              if (theGame.isGameOver()) {
+//                  theGame.printBoard();
+//                  break;
+//              }
+//              theGame.cyclePlayers();
+//        }
+//        if (playAgain()) {
+//            playGame(createGame(inPutterStream, outPutterStream));
+//        }
+//    }
 
     public boolean playAgain() {
         messagePutter.playAgainMessage();

@@ -13,4 +13,12 @@ public class MinimaxComputerTest {
         Assert.assertEquals(otherPlayer, testComputer.cyclePlayers(playerMark));
 
     }
+
+    @Test
+    public void itShouldChooseAnyMove() {
+            String playerMark = "O";
+            Board testBoard = new Board();
+            MinimaxComputer testComputer = new MinimaxComputer(playerMark);
+            Assert.assertEquals("5", testComputer.getMove(testBoard));
+    }
 }
