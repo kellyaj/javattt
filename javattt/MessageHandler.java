@@ -32,4 +32,13 @@ public class MessageHandler {
         outPutter.printOutput("Would you like to play again? Type 'yes' or 'no'");
     }
 
+    public void firstPlayerMessage() {
+        outPutter.printOutput("The first player is... type 'human' or 'computer'");
+    }
+
+    public void secondPlayerMessage() {
+        outPutter.printOutput("The second player is... type 'human' or 'computer'");
+
+    }
+
 }

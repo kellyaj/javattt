@@ -11,24 +11,20 @@ public class Game {
     public OutputHandler outPutter;
     public InputHandler inPutter;
     public MessageHandler messagePutter;
-    public HumanPlayer theHuman;
-    public EasyComputer theComputer;
     public Player currentPlayer;
     public Player player1;
     public Player player2;
 
-    public Game(Board theBoard,InputStream newInStream, OutputStream newOutStream) {
+    public Game(Board theBoard,InputStream newInStream, OutputStream newOutStream, Player firstPlayer, Player secondPlayer) {
         gameBoard = theBoard;
         outPutter = new OutputHandler(newOutStream);
         inPutter = new InputHandler(newInStream);
         gamePrinter = new Printer(outPutter);
         messagePutter = new MessageHandler(outPutter);
         gameScorer = new Scorer();
-        theHuman = new HumanPlayer(new String("X"), inPutter, outPutter, messagePutter);
-        theComputer = new EasyComputer();
-        currentPlayer = theHuman;  // defaulting to this for now
-        player1 = theHuman;
-        player2 = theComputer;
+        player1 = firstPlayer;
+        player2 = secondPlayer;
+        currentPlayer = firstPlayer;
 
     }
 
@@ -39,11 +35,9 @@ public class Game {
         messagePutter = new MessageHandler(outPutter);
         gamePrinter = new Printer(outPutter);
         gameScorer = new Scorer();
-        theHuman = new HumanPlayer(new String("X"), inPutter, outPutter, messagePutter);
-        theComputer = new EasyComputer();
-        currentPlayer = theHuman;  // defaulting to this for now
-        player1 = theHuman;
-        player2 = theComputer;
+        player1 = new HumanPlayer(new String("X"), inPutter, outPutter, messagePutter);
+        player2 = new EasyComputer();
+        currentPlayer = player1;
     }
 
     public void printBoard() {

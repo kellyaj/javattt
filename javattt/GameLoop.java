@@ -11,6 +11,8 @@ public class GameLoop {
     private MessageHandler messagePutter;
     private InputStream inPutterStream;
     private OutputStream outPutterStream;
+    private Player firstPlayer;
+    private Player secondPlayer;
 
     public GameLoop(InputStream newInputStream, OutputStream newOutStream) {
         inPutter = new InputHandler(newInputStream);
@@ -18,7 +20,8 @@ public class GameLoop {
         inPutterStream = newInputStream;
         outPutterStream = newOutStream;
         messagePutter = new MessageHandler(outPutter);
-        currentGame = createGame(newInputStream, newOutStream);
+        Player[] chosenPlayers = choosePlayers();
+        currentGame = createGame(newInputStream, newOutStream, chosenPlayers[0], chosenPlayers[1]);
     }
 
     public GameLoop() {
@@ -55,8 +58,25 @@ public class GameLoop {
         return response.equals("yes");
     }
 
-    public Game createGame(InputStream gameInputStream, OutputStream gameOutputStream) {
-        return new Game(new Board(),gameInputStream, gameOutputStream);
+    public Game createGame(InputStream gameInputStream, OutputStream gameOutputStream, Player gameFirstPlayer, Player gameSecondPlayer) {
+        return new Game(new Board(),gameInputStream, gameOutputStream, gameFirstPlayer, gameSecondPlayer);
+    }
+
+    public Player[] choosePlayers() {
+        Player[] playerArray = new Player[2];
+        messagePutter.firstPlayerMessage();
+        playerArray[0] = createPlayer(inPutter.getInput(), "X");
+        messagePutter.secondPlayerMessage();
+        playerArray[1] = createPlayer(inPutter.getInput(), "O");
+        return playerArray;
+    }
+
+    public Player createPlayer(String rawUserChoice, String playerMark) {
+        if (rawUserChoice.equals("human")) {
+            return new HumanPlayer(playerMark, inPutter, outPutter, messagePutter);
+        } else {
+            return new MinimaxComputer(playerMark);
+        }
     }
 
 }
