@@ -1,5 +1,9 @@
-package javattt;
+package spec;
 
+import javattt.HumanPlayer;
+import javattt.InputHandler;
+import javattt.MessageHandler;
+import javattt.OutputHandler;
 import junit.framework.Assert;
 import org.junit.Test;
 

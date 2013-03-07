@@ -1,5 +1,7 @@
-package javattt;
+package spec;
 
+import javattt.Game;
+import javattt.Player;
 import junit.framework.Assert;
 import org.junit.Before;
 import org.junit.Test;

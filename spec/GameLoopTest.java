@@ -1,5 +1,8 @@
-package javattt;
+package spec;
 
+import javattt.GameLoop;
+import javattt.InputHandler;
+import javattt.Player;
 import junit.framework.Assert;
 import org.junit.Test;
 
@@ -29,7 +32,7 @@ public class GameLoopTest {
 //    public void itShouldCreateANewGame() {
 //        GameLoop testLoop = new GameLoop();
 //        OutputStream testStream = System.out;
-//        Game testGame = testLoop.createGame(System.in, testStream);
+//        Game testGame = testLoop.createGame(System.in, testStream, new MinimaxComputer("X"), new MinimaxComputer("O"));
         //Assert.assertEquals(testGame.outPutter.streamPrinter, testStream);         // proper result, different objects
 //    }
 

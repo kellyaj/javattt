@@ -1,5 +1,7 @@
-package javattt;
+package spec;
 
+import javattt.Board;
+import javattt.MinimaxComputer;
 import org.junit.Assert;
 import org.junit.Test;
 

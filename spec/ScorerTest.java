@@ -1,5 +1,6 @@
-package javattt;
+package spec;
 
+import javattt.Scorer;
 import org.junit.Assert;
 import org.junit.Test;
 

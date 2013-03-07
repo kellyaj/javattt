@@ -42,11 +42,6 @@ public class Board {
     return true;
   }
 
-  public boolean spotIsTaken(String chosenSpot) {
-    String spotValue = this.positions.get(chosenSpot);
-    return (spotValue.equals(chosenSpot));
-  }
-
   public List availableSpots() {
     String[] positionsArray = this.positions.values().toArray(new String[0]);
     List<String> untakenSpots = new LinkedList<String>();

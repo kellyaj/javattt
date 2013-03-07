@@ -1,4 +1,6 @@
-package javattt;
+package spec;
+import javattt.Board;
+import javattt.Printer;
 import org.junit.*;
 import java.util.HashMap;
 

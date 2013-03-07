@@ -1,5 +1,6 @@
-package javattt;
+package spec;
 
+import javattt.InputHandler;
 import junit.framework.Assert;
 import org.junit.Test;
 

@@ -1,4 +1,5 @@
-package javattt;
+package spec;
+import javattt.Board;
 import org.junit.*;
 import java.util.HashMap;
 import java.util.List;
@@ -42,11 +43,6 @@ public class BoardTest {
     Assert.assertEquals(gameBoard.getPositions().get("1"), "X");
     }
 
-  @Test
-   public void itShouldReturnTrueIfSpaceIsTaken() {
-    gameBoard.placeMove("1", "X");
-    Assert.assertTrue(gameBoard.spotIsTaken("1"));
-  }
 
   @Test
    public void itShouldReturnAListOfAvailableSpots() {
