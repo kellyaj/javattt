@@ -2,14 +2,14 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="b7a5fd5e-05bd-4d6e-bc34-6002083ad1f2" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/javattt/Game.java" afterPath="$PROJECT_DIR$/javattt/Game.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/javattt/GameLoop.java" afterPath="$PROJECT_DIR$/javattt/GameLoop.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/javattt/MessageHandler.java" afterPath="$PROJECT_DIR$/javattt/MessageHandler.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/javattt/GameLoopTest.java" afterPath="$PROJECT_DIR$/javattt/GameLoopTest.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/javattt/GameTest.java" afterPath="$PROJECT_DIR$/javattt/GameTest.java" />
     </list>
     <ignored path="javattt.iws" />
     <ignored path=".idea/workspace.xml" />
-    <file path="/Dummy.txt" changelist="b7a5fd5e-05bd-4d6e-bc34-6002083ad1f2" time="1361992028317" ignored="false" />
-    <file path="/fragment.java" changelist="b7a5fd5e-05bd-4d6e-bc34-6002083ad1f2" time="1362063917328" ignored="false" />
+    <file path="/Dummy.txt" changelist="b7a5fd5e-05bd-4d6e-bc34-6002083ad1f2" time="1362672989657" ignored="false" />
+    <file path="/fragment.java" changelist="b7a5fd5e-05bd-4d6e-bc34-6002083ad1f2" time="1362672989657" ignored="false" />
     <file path="/BoardTest.java" changelist="b7a5fd5e-05bd-4d6e-bc34-6002083ad1f2" time="1362083393428" ignored="false" />
     <file path="/Board.java" changelist="b7a5fd5e-05bd-4d6e-bc34-6002083ad1f2" time="1362605853503" ignored="false" />
     <file path="/Printer.java" changelist="b7a5fd5e-05bd-4d6e-bc34-6002083ad1f2" time="1362083618768" ignored="false" />
@@ -26,12 +26,12 @@
     <file path="/HumanPlayerTest.java" changelist="b7a5fd5e-05bd-4d6e-bc34-6002083ad1f2" time="1362169318637" ignored="false" />
     <file path="/Game.java" changelist="b7a5fd5e-05bd-4d6e-bc34-6002083ad1f2" time="1362670245944" ignored="false" />
     <file path="/Player.java" changelist="b7a5fd5e-05bd-4d6e-bc34-6002083ad1f2" time="1362086245783" ignored="false" />
-    <file path="/GameTest.java" changelist="b7a5fd5e-05bd-4d6e-bc34-6002083ad1f2" time="1362088634437" ignored="false" />
+    <file path="/GameTest.java" changelist="b7a5fd5e-05bd-4d6e-bc34-6002083ad1f2" time="1362672307988" ignored="false" />
     <file path="/MessageHandler.java" changelist="b7a5fd5e-05bd-4d6e-bc34-6002083ad1f2" time="1362671088458" ignored="false" />
-    <file path="/GameLoop.java" changelist="b7a5fd5e-05bd-4d6e-bc34-6002083ad1f2" time="1362671321373" ignored="false" />
+    <file path="/GameLoop.java" changelist="b7a5fd5e-05bd-4d6e-bc34-6002083ad1f2" time="1362672876316" ignored="false" />
     <file path="/MinimaxComputer.java" changelist="b7a5fd5e-05bd-4d6e-bc34-6002083ad1f2" time="1362606850636" ignored="false" />
     <file path="/MinimaxComputerTest.java" changelist="b7a5fd5e-05bd-4d6e-bc34-6002083ad1f2" time="1362609358984" ignored="false" />
-    <file path="/GameLoopTest.java" changelist="b7a5fd5e-05bd-4d6e-bc34-6002083ad1f2" time="1362519295069" ignored="false" />
+    <file path="/GameLoopTest.java" changelist="b7a5fd5e-05bd-4d6e-bc34-6002083ad1f2" time="1362672885373" ignored="false" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -90,17 +90,6 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="Board.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/javattt/Board.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="55" column="47" selection-start="1528" selection-end="1528" vertical-scroll-proportion="0.0">
-              <folding>
-                <element signature="e#1348#1356#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file leaf-file-name="MinimaxComputer.java" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/javattt/MinimaxComputer.java">
           <provider selected="true" editor-type-id="text-editor">
@@ -113,10 +102,43 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="GameLoop.java" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="GameLoop.java" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/javattt/GameLoop.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="54" column="34" selection-start="1759" selection-end="1759" vertical-scroll-proportion="-0.14606741">
+            <state line="70" column="51" selection-start="2473" selection-end="2473" vertical-scroll-proportion="0.0">
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="GameLoopTest.java" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/javattt/GameLoopTest.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="32" column="31" selection-start="1047" selection-end="1047" vertical-scroll-proportion="0.4551282">
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Game.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/javattt/Game.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="29" column="49" selection-start="914" selection-end="914" vertical-scroll-proportion="0.0">
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="GameTest.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/javattt/GameTest.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="10" column="80" selection-start="175" selection-end="175" vertical-scroll-proportion="0.0">
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -133,46 +155,12 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Game.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/javattt/Game.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="28" column="38" selection-start="913" selection-end="913" vertical-scroll-proportion="0.0">
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file leaf-file-name="MinimaxComputerTest.java" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/javattt/MinimaxComputerTest.java">
           <provider selected="true" editor-type-id="text-editor">
             <state line="72" column="36" selection-start="2394" selection-end="2394" vertical-scroll-proportion="0.0">
               <folding>
                 <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="BoardTest.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/javattt/BoardTest.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="26" column="47" selection-start="645" selection-end="645" vertical-scroll-proportion="0.0">
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Scorer.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/javattt/Scorer.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="44" column="95" selection-start="1307" selection-end="1307" vertical-scroll-proportion="0.0">
-              <folding>
-                <element signature="imports" expanded="true" />
-                <element signature="e#738#746#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -197,21 +185,21 @@
     <option name="changedFiles">
       <list>
         <option value="$PROJECT_DIR$/javattt/EasyComputerTest.java" />
-        <option value="$PROJECT_DIR$/javattt/GameTest.java" />
         <option value="$PROJECT_DIR$/javattt/HumanPlayerTest.java" />
         <option value="$PROJECT_DIR$/javattt/OutputHandlerTest.java" />
         <option value="$PROJECT_DIR$/javattt/OutputHandler.java" />
         <option value="$PROJECT_DIR$/javattt/HumanPlayer.java" />
         <option value="$PROJECT_DIR$/javattt/ScorerTest.java" />
         <option value="$PROJECT_DIR$/javattt/BoardTest.java" />
-        <option value="$PROJECT_DIR$/javattt/GameLoopTest.java" />
         <option value="$PROJECT_DIR$/javattt/Scorer.java" />
         <option value="$PROJECT_DIR$/javattt/MinimaxComputerTest.java" />
         <option value="$PROJECT_DIR$/javattt/MinimaxComputer.java" />
         <option value="$PROJECT_DIR$/javattt/Board.java" />
         <option value="$PROJECT_DIR$/javattt/Game.java" />
         <option value="$PROJECT_DIR$/javattt/MessageHandler.java" />
+        <option value="$PROJECT_DIR$/javattt/GameTest.java" />
         <option value="$PROJECT_DIR$/javattt/GameLoop.java" />
+        <option value="$PROJECT_DIR$/javattt/GameLoopTest.java" />
       </list>
     </option>
   </component>
@@ -302,7 +290,7 @@
       <recent name="$PROJECT_DIR$/junit-4/10" />
     </key>
   </component>
-  <component name="RunManager" selected="JUnit.MinimaxComputerTest.itShouldChooseAWinOverABlock">
+  <component name="RunManager" selected="JUnit.GameLoopTest">
     <configuration default="false" name="MinimaxComputerTest" type="JUnit" factoryName="JUnit" temporary="true">
       <module name="javattt" />
       <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
@@ -331,72 +319,6 @@
       <ConfigurationWrapper RunnerId="Run" />
       <method />
     </configuration>
-    <configuration default="false" name="MinimaxComputerTest.itShouldChooseADiagonalWinIfAvailable" type="JUnit" factoryName="JUnit" temporary="true">
-      <module name="javattt" />
-      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
-      <option name="ALTERNATIVE_JRE_PATH" value="" />
-      <option name="PACKAGE_NAME" value="javattt" />
-      <option name="MAIN_CLASS_NAME" value="javattt.MinimaxComputerTest" />
-      <option name="METHOD_NAME" value="itShouldChooseADiagonalWinIfAvailable" />
-      <option name="TEST_OBJECT" value="method" />
-      <option name="VM_PARAMETERS" value="-ea" />
-      <option name="PARAMETERS" value="" />
-      <option name="WORKING_DIRECTORY" value="file://$PROJECT_DIR$" />
-      <option name="ENV_VARIABLES" />
-      <option name="PASS_PARENT_ENVS" value="true" />
-      <option name="TEST_SEARCH_SCOPE">
-        <value defaultName="moduleWithDependencies" />
-      </option>
-      <envs />
-      <patterns />
-      <RunnerSettings RunnerId="Run" />
-      <ConfigurationWrapper RunnerId="Run" />
-      <method />
-    </configuration>
-    <configuration default="false" name="MinimaxComputerTest.itShouldOptForImmediateWin" type="JUnit" factoryName="JUnit" temporary="true">
-      <module name="javattt" />
-      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
-      <option name="ALTERNATIVE_JRE_PATH" value="" />
-      <option name="PACKAGE_NAME" value="javattt" />
-      <option name="MAIN_CLASS_NAME" value="javattt.MinimaxComputerTest" />
-      <option name="METHOD_NAME" value="itShouldOptForImmediateWin" />
-      <option name="TEST_OBJECT" value="method" />
-      <option name="VM_PARAMETERS" value="-ea" />
-      <option name="PARAMETERS" value="" />
-      <option name="WORKING_DIRECTORY" value="file://$PROJECT_DIR$" />
-      <option name="ENV_VARIABLES" />
-      <option name="PASS_PARENT_ENVS" value="true" />
-      <option name="TEST_SEARCH_SCOPE">
-        <value defaultName="moduleWithDependencies" />
-      </option>
-      <envs />
-      <patterns />
-      <RunnerSettings RunnerId="Run" />
-      <ConfigurationWrapper RunnerId="Run" />
-      <method />
-    </configuration>
-    <configuration default="false" name="MinimaxComputerTest.itShouldChooseObviousWin" type="JUnit" factoryName="JUnit" temporary="true">
-      <module name="javattt" />
-      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
-      <option name="ALTERNATIVE_JRE_PATH" value="" />
-      <option name="PACKAGE_NAME" value="javattt" />
-      <option name="MAIN_CLASS_NAME" value="javattt.MinimaxComputerTest" />
-      <option name="METHOD_NAME" value="itShouldChooseObviousWin" />
-      <option name="TEST_OBJECT" value="method" />
-      <option name="VM_PARAMETERS" value="-ea" />
-      <option name="PARAMETERS" value="" />
-      <option name="WORKING_DIRECTORY" value="file://$PROJECT_DIR$" />
-      <option name="ENV_VARIABLES" />
-      <option name="PASS_PARENT_ENVS" value="true" />
-      <option name="TEST_SEARCH_SCOPE">
-        <value defaultName="moduleWithDependencies" />
-      </option>
-      <envs />
-      <patterns />
-      <RunnerSettings RunnerId="Run" />
-      <ConfigurationWrapper RunnerId="Run" />
-      <method />
-    </configuration>
     <configuration default="false" name="MinimaxComputerTest.itShouldChooseAWinOverABlock" type="JUnit" factoryName="JUnit" temporary="true">
       <module name="javattt" />
       <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
@@ -405,6 +327,72 @@
       <option name="MAIN_CLASS_NAME" value="javattt.MinimaxComputerTest" />
       <option name="METHOD_NAME" value="itShouldChooseAWinOverABlock" />
       <option name="TEST_OBJECT" value="method" />
+      <option name="VM_PARAMETERS" value="-ea" />
+      <option name="PARAMETERS" value="" />
+      <option name="WORKING_DIRECTORY" value="file://$PROJECT_DIR$" />
+      <option name="ENV_VARIABLES" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <option name="TEST_SEARCH_SCOPE">
+        <value defaultName="moduleWithDependencies" />
+      </option>
+      <envs />
+      <patterns />
+      <RunnerSettings RunnerId="Run" />
+      <ConfigurationWrapper RunnerId="Run" />
+      <method />
+    </configuration>
+    <configuration default="false" name="GameLoopTest" type="JUnit" factoryName="JUnit" temporary="true">
+      <module name="javattt" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" value="" />
+      <option name="PACKAGE_NAME" value="javattt" />
+      <option name="MAIN_CLASS_NAME" value="javattt.GameLoopTest" />
+      <option name="METHOD_NAME" value="" />
+      <option name="TEST_OBJECT" value="class" />
+      <option name="VM_PARAMETERS" value="-ea" />
+      <option name="PARAMETERS" value="" />
+      <option name="WORKING_DIRECTORY" value="file://$PROJECT_DIR$" />
+      <option name="ENV_VARIABLES" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <option name="TEST_SEARCH_SCOPE">
+        <value defaultName="moduleWithDependencies" />
+      </option>
+      <envs />
+      <patterns />
+      <RunnerSettings RunnerId="Run" />
+      <ConfigurationWrapper RunnerId="Run" />
+      <method />
+    </configuration>
+    <configuration default="false" name="GameLoopTest.itShouldProperlyCreatePlayers" type="JUnit" factoryName="JUnit" temporary="true">
+      <module name="javattt" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" value="" />
+      <option name="PACKAGE_NAME" value="javattt" />
+      <option name="MAIN_CLASS_NAME" value="javattt.GameLoopTest" />
+      <option name="METHOD_NAME" value="itShouldProperlyCreatePlayers" />
+      <option name="TEST_OBJECT" value="method" />
+      <option name="VM_PARAMETERS" value="-ea" />
+      <option name="PARAMETERS" value="" />
+      <option name="WORKING_DIRECTORY" value="file://$PROJECT_DIR$" />
+      <option name="ENV_VARIABLES" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <option name="TEST_SEARCH_SCOPE">
+        <value defaultName="moduleWithDependencies" />
+      </option>
+      <envs />
+      <patterns />
+      <RunnerSettings RunnerId="Run" />
+      <ConfigurationWrapper RunnerId="Run" />
+      <method />
+    </configuration>
+    <configuration default="false" name="GameTest" type="JUnit" factoryName="JUnit" temporary="true">
+      <module name="javattt" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" value="" />
+      <option name="PACKAGE_NAME" value="javattt" />
+      <option name="MAIN_CLASS_NAME" value="javattt.GameTest" />
+      <option name="METHOD_NAME" value="" />
+      <option name="TEST_OBJECT" value="class" />
       <option name="VM_PARAMETERS" value="-ea" />
       <option name="PARAMETERS" value="" />
       <option name="WORKING_DIRECTORY" value="file://$PROJECT_DIR$" />
@@ -553,18 +541,18 @@
     <list size="6">
       <item index="0" class="java.lang.String" itemvalue="JUnit.BoardTest" />
       <item index="1" class="java.lang.String" itemvalue="JUnit.MinimaxComputerTest" />
-      <item index="2" class="java.lang.String" itemvalue="JUnit.MinimaxComputerTest.itShouldChooseADiagonalWinIfAvailable" />
-      <item index="3" class="java.lang.String" itemvalue="JUnit.MinimaxComputerTest.itShouldOptForImmediateWin" />
-      <item index="4" class="java.lang.String" itemvalue="JUnit.MinimaxComputerTest.itShouldChooseObviousWin" />
-      <item index="5" class="java.lang.String" itemvalue="JUnit.MinimaxComputerTest.itShouldChooseAWinOverABlock" />
+      <item index="2" class="java.lang.String" itemvalue="JUnit.MinimaxComputerTest.itShouldChooseAWinOverABlock" />
+      <item index="3" class="java.lang.String" itemvalue="JUnit.GameLoopTest" />
+      <item index="4" class="java.lang.String" itemvalue="JUnit.GameLoopTest.itShouldProperlyCreatePlayers" />
+      <item index="5" class="java.lang.String" itemvalue="JUnit.GameTest" />
     </list>
     <recent_temporary>
       <list size="5">
-        <item index="0" class="java.lang.String" itemvalue="JUnit.MinimaxComputerTest.itShouldChooseAWinOverABlock" />
-        <item index="1" class="java.lang.String" itemvalue="JUnit.MinimaxComputerTest" />
-        <item index="2" class="java.lang.String" itemvalue="JUnit.MinimaxComputerTest.itShouldOptForImmediateWin" />
-        <item index="3" class="java.lang.String" itemvalue="JUnit.MinimaxComputerTest.itShouldChooseObviousWin" />
-        <item index="4" class="java.lang.String" itemvalue="JUnit.MinimaxComputerTest.itShouldChooseADiagonalWinIfAvailable" />
+        <item index="0" class="java.lang.String" itemvalue="JUnit.GameLoopTest" />
+        <item index="1" class="java.lang.String" itemvalue="JUnit.GameTest" />
+        <item index="2" class="java.lang.String" itemvalue="JUnit.GameLoopTest.itShouldProperlyCreatePlayers" />
+        <item index="3" class="java.lang.String" itemvalue="JUnit.MinimaxComputerTest.itShouldChooseAWinOverABlock" />
+        <item index="4" class="java.lang.String" itemvalue="JUnit.MinimaxComputerTest" />
       </list>
     </recent_temporary>
     <configuration name="&lt;template&gt;" type="WebApp" default="true" selected="false">
@@ -696,15 +684,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/javattt/GameTest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="8" column="13" selection-start="138" selection-end="138" vertical-scroll-proportion="0.2690583">
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/javattt/InputHandler.java">
       <provider selected="true" editor-type-id="text-editor">
         <state line="6" column="13" selection-start="87" selection-end="87" vertical-scroll-proportion="0.0">
@@ -717,15 +696,6 @@
     <entry file="file://$PROJECT_DIR$/javattt/OutputHandler.java">
       <provider selected="true" editor-type-id="text-editor">
         <state line="6" column="13" selection-start="90" selection-end="90" vertical-scroll-proportion="0.0">
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/javattt/GameLoopTest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="24" column="55" selection-start="704" selection-end="704" vertical-scroll-proportion="0.0">
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
@@ -760,30 +730,11 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/javattt/Game.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="28" column="38" selection-start="913" selection-end="913" vertical-scroll-proportion="0.0">
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/javattt/MinimaxComputerTest.java">
       <provider selected="true" editor-type-id="text-editor">
         <state line="72" column="36" selection-start="2394" selection-end="2394" vertical-scroll-proportion="0.0">
           <folding>
             <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/javattt/MinimaxComputer.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="43" column="40" selection-start="1500" selection-end="1500" vertical-scroll-proportion="0.0">
-          <folding>
-            <element signature="e#1376#1392#0" expanded="true" />
-            <element signature="e#2416#2432#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -804,9 +755,46 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/javattt/MinimaxComputer.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="43" column="40" selection-start="1500" selection-end="1500" vertical-scroll-proportion="0.0">
+          <folding>
+            <element signature="e#1376#1392#0" expanded="true" />
+            <element signature="e#2416#2432#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/javattt/GameTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="10" column="80" selection-start="175" selection-end="175" vertical-scroll-proportion="0.0">
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/javattt/Game.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="29" column="49" selection-start="914" selection-end="914" vertical-scroll-proportion="0.0">
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/javattt/GameLoop.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="54" column="34" selection-start="1759" selection-end="1759" vertical-scroll-proportion="-0.14606741">
+        <state line="70" column="51" selection-start="2473" selection-end="2473" vertical-scroll-proportion="0.0">
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/javattt/GameLoopTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="32" column="31" selection-start="1047" selection-end="1047" vertical-scroll-proportion="0.4551282">
           <folding>
             <element signature="imports" expanded="true" />
           </folding>

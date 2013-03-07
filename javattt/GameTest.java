@@ -18,15 +18,15 @@ public class GameTest {
 
     @Test
     public void itShouldHaveProperInitializedThings() {
-        HumanPlayer testPlayer = testGame.theHuman;
+        Player testPlayer = testGame.player1;
         Assert.assertTrue(testGame.currentPlayer == testPlayer);
     }
 
     @Test
     public void itShouldBeAbleToCyclePlayers() {
         testGame.cyclePlayers();
-        EasyComputer testComputer = testGame.theComputer;
-        HumanPlayer testHuman = testGame.theHuman;
+        Player testComputer = testGame.player2;
+        Player testHuman = testGame.player1;
         Assert.assertEquals(testGame.currentPlayer, testComputer);
         testGame.cyclePlayers();
         Assert.assertEquals(testGame.currentPlayer, testHuman);

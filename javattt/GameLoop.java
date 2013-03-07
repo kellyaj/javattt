@@ -6,11 +6,11 @@ import java.io.OutputStream;
 
 public class GameLoop {
     private Game currentGame;
-    private OutputHandler outPutter;
-    private InputHandler inPutter;
+    public OutputHandler outPutter;
+    public InputHandler inPutter;
     private MessageHandler messagePutter;
-    private InputStream inPutterStream;
-    private OutputStream outPutterStream;
+    public InputStream inPutterStream;
+    public OutputStream outPutterStream;
     private Player firstPlayer;
     private Player secondPlayer;
 
