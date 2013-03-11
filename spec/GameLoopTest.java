@@ -40,7 +40,7 @@ public class GameLoopTest {
     public void itShouldProperlyCreatePlayers() {
         GameLoop testLoop = new GameLoop();
         Player testPlayer = testLoop.createPlayer("human", "X");
-        Assert.assertEquals("X", testPlayer.mark);
+        Assert.assertEquals("X", testPlayer.getMark());
 
     }
 

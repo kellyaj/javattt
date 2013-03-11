@@ -32,6 +32,17 @@ public class BoardTest {
   }
 
   @Test
+  public void itShouldBeAbleToBeCreatedWithAnArray() {
+      String[] spots = {"X", "O", "X", "X", "O", "X", "X", "O", "X"};
+      Board board = new Board(spots);
+      HashMap<String, String> positions = board.getPositions();
+      for (int i=0; i < positions.size(); i++) {
+        String key = Integer.toString(i+1);
+        Assert.assertEquals(spots[i], positions.get(key));
+      }
+  }
+
+  @Test
   public void itShouldHavePositions() {
     HashMap<String, String> gameSpots = gameBoard.getPositions();
     Assert.assertEquals(gameSpots.get("1"),  "1");
@@ -41,7 +52,7 @@ public class BoardTest {
   public void itShouldAddAPlayerMove() {
     gameBoard.placeMove("1", "X");
     Assert.assertEquals(gameBoard.getPositions().get("1"), "X");
-    }
+  }
 
 
   @Test

@@ -4,58 +4,61 @@ import java.util.*;
 
 public class Board {
 
-  // fields
-  private HashMap<String, String> positions;
-  private String xPlayer;
-  private String oPlayer;
+    // fields
+    private HashMap<String, String> positions;
+    private static String x = "X";
+    private static String o = "O";
 
-  // constructor
-  public Board(HashMap<String, String> startingSpots) {
-    positions = startingSpots;
-      xPlayer = "X";
-      oPlayer = "O";
-  }
+    // constructor
+    public Board(HashMap<String, String> startingSpots) {
+        positions = startingSpots;
+    }
 
-  public Board() {
-      HashMap<String, String> newPositions = new HashMap<String, String>();
-      newPositions.put("1", "1");
-      newPositions.put("2", "2");
-      newPositions.put("3", "3");
-      newPositions.put("4", "4");
-      newPositions.put("5", "5");
-      newPositions.put("6", "6");
-      newPositions.put("7", "7");
-      newPositions.put("8", "8");
-      newPositions.put("9", "9");
-      positions = newPositions;
-      xPlayer = "X";
-      oPlayer = "O";
-  }
+    public Board() {
+        HashMap<String, String> newPositions = new HashMap<String, String>();
+        newPositions.put("1", "1");
+        newPositions.put("2", "2");
+        newPositions.put("3", "3");
+        newPositions.put("4", "4");
+        newPositions.put("5", "5");
+        newPositions.put("6", "6");
+        newPositions.put("7", "7");
+        newPositions.put("8", "8");
+        newPositions.put("9", "9");
+        positions = newPositions;
+    }
 
-  // methods
-  public HashMap<String, String> getPositions() {
-      return this.positions;
-  }
+    public Board(String[] spots) {
+        positions = new HashMap<String, String>();
+        for (int i=0; i < spots.length; i++) {
+            positions.put(Integer.toString(i+1), spots[i]);
+        }
+    }
 
-  public boolean placeMove(String chosenSpace, String playerMark) {
-    this.positions.put(chosenSpace, playerMark);
-    return true;
-  }
+    // methods
+    public HashMap<String, String> getPositions() {
+        return this.positions;
+    }
 
-  public List availableSpots() {
-    String[] positionsArray = this.positions.values().toArray(new String[0]);
-    List<String> untakenSpots = new LinkedList<String>();
+    public boolean placeMove(String chosenSpace, String playerMark) {
+        this.positions.put(chosenSpace, playerMark);
+        return true;
+    }
+
+    public List<String> availableSpots() {
+        String[] positionsArray = this.positions.values().toArray(new String[0]);
+        List<String> untakenSpots = new LinkedList<String>();
         for (String position : positionsArray) {
-            if (position.equals(xPlayer)) {
-              // do nothing
-            } else if (position.equals(oPlayer)){
-              // do nothing
+            if (position.equals(x)) {
+                // do nothing
+            } else if (position.equals(o)){
+                // do nothing
             } else {
-            untakenSpots.add(position);
+                untakenSpots.add(position);
             }
         }
-    return untakenSpots;
-  }
+        return untakenSpots;
+    }
 
 
 }

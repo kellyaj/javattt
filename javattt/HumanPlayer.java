@@ -3,8 +3,7 @@ package javattt;
 import java.util.List;
 import java.util.Scanner;
 
-public class HumanPlayer extends Player {
-
+public class HumanPlayer implements Player {
   //fields
   public String mark;
   public InputHandler inPutter;
@@ -14,21 +13,24 @@ public class HumanPlayer extends Player {
 
   // constructor
   public HumanPlayer(String playerMark, InputHandler newInPutter, OutputHandler newOutPutter, MessageHandler newMessagePutter) {
-      super(playerMark);
+      //super(playerMark);
+      mark = playerMark;
       inPutter = newInPutter;
       outPutter = newOutPutter;
       messagePutter = newMessagePutter;
   }
   public HumanPlayer() {
-      super(new String("X"));
+      //super(new String("X"));
+      mark = "X";
       inPutter = new InputHandler(System.in);
       outPutter = new OutputHandler(System.out);
       messagePutter = new MessageHandler();
   }
 
   // methods
+  public String getMove(Board gameBoard) {
 
-  public String getMove(List<String> availableMoves) {
+    List<String> availableMoves = gameBoard.availableSpots();
     messagePutter.chooseMovePrompt();
     displayAvailableMoves(availableMoves);
     String chosenMove = inPutter.getInput();
@@ -36,10 +38,15 @@ public class HumanPlayer extends Player {
           return chosenMove;
       } else {
           messagePutter.invalidMoveMessage();
-          this.getMove(availableMoves);
+          messagePutter.chooseMovePrompt();
+          this.getMove(gameBoard);   // choose move again
       }
      return chosenMove;
   }
+
+    public String getMark() {
+        return this.mark;
+    }
 
     public void displayAvailableMoves(List<String> availableMoves) {
         String[] spotsArray = availableMoves.toArray(new String[0]);     // should I use ArrayList here? Array size issue

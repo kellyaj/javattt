@@ -1,17 +1,11 @@
 package javattt;
 
+import com.sun.org.apache.bcel.internal.generic.ACONST_NULL;
+
 import java.util.List;
 
-public class Player {
+public interface Player {
 
-    public String mark;
-
-    public Player(String playerMark) {
-        mark = playerMark;
-    }
-
-    public String getMove(List<String> availableSpots) {
-      return this.getMove(availableSpots);
-    }
-
+    public String getMark();
+    public String getMove(Board gameBoard);
 }

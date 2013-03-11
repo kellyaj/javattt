@@ -3,16 +3,20 @@ import sun.jvm.hotspot.memory.FreeList;
 import java.util.List;
 import java.util.Random;
 
-public class EasyComputer extends Player {
+public class EasyComputer implements Player {
     public String mark;
 
     public EasyComputer() {
-        super(new String("O"));
+        mark = "O";
 
     }
 
-    public String getMove(List<String> availableSpots) {
+    public String getMove(Board board) {
         Random random = new Random();
-        return availableSpots.get(random.nextInt(availableSpots.size()));
+        return board.availableSpots().get(random.nextInt(board.availableSpots().size()));
+    }
+
+    public String getMark() {
+        return this.mark;
     }
 }

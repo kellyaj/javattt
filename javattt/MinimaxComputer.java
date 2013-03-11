@@ -2,7 +2,7 @@ package javattt;
 
 import java.util.*;
 
-public class MinimaxComputer extends Player {
+public class MinimaxComputer implements Player {
 
     public String mark;
     private Scorer gameScorer;
@@ -10,7 +10,6 @@ public class MinimaxComputer extends Player {
     private String oPlayer;
 
     public MinimaxComputer(String playerMark) {
-        super(playerMark);
         gameScorer = new Scorer();
         xPlayer = "X";
         oPlayer = "O";
@@ -19,7 +18,6 @@ public class MinimaxComputer extends Player {
     }
 
     public MinimaxComputer() {
-        super(new String("O"));
         this.mark = "O";
         gameScorer = new Scorer();
     }
@@ -28,9 +26,11 @@ public class MinimaxComputer extends Player {
         String currentPlayer = this.mark;
         int startingDepth = 0;
         HashMap<Double, String> miniMaxResult= this.miniMaxMove(gameBoard, currentPlayer, startingDepth);
-        System.out.println("ATTENTION, the answer is " + miniMaxResult);
-        String[] recommendedMove = miniMaxResult.entrySet().toArray(new String[]{});
-        return recommendedMove[0];
+        return miniMaxResult.get(miniMaxResult.keySet().toArray()[0]);
+    }
+
+    public String getMark() {
+        return this.mark;
     }
 
     public HashMap<Double, String> miniMaxMove(Board gameBoard, String currentPlayer, int depth) {

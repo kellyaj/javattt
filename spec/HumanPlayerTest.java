@@ -1,17 +1,10 @@
 package spec;
-
-import javattt.HumanPlayer;
-import javattt.InputHandler;
-import javattt.MessageHandler;
-import javattt.OutputHandler;
+import javattt.*;
 import junit.framework.Assert;
 import org.junit.Test;
-
-import javax.swing.*;
 import java.io.ByteArrayInputStream;
-import java.util.ArrayList;
-import java.util.LinkedList;
-import java.util.List;
+import java.util.HashMap;
+;
 
 public class HumanPlayerTest {
     @Test
@@ -21,14 +14,14 @@ public class HumanPlayerTest {
         MessageHandler testMessenger =  new MessageHandler(testOutPutter);
         String testMark = "X";
         HumanPlayer testHuman = new HumanPlayer(testMark, testInPutter, testOutPutter, testMessenger);
-        //Assert.assertEquals("X", testHuman.mark);
+        Assert.assertEquals("X", testHuman.mark);
     }
 
     @Test
     public void itShouldInitializeWithDefaults() {
         String expectedMark = new String("X");
         HumanPlayer testHuman = new HumanPlayer();
-        //Assert.assertTrue(expectedMark.equals(testHuman.mark));
+        Assert.assertTrue(expectedMark.equals(testHuman.mark));
     }
 
     @Test
@@ -36,34 +29,43 @@ public class HumanPlayerTest {
         OutputHandler testOutPutter = new OutputHandler(System.out);
         MessageHandler testMessenger =  new MessageHandler(testOutPutter);
         String testMessage = "Water";
+
         InputHandler testInPutter = new InputHandler(new ByteArrayInputStream(testMessage.getBytes()));
         String testMark = "X";
-        List<String> testList = new LinkedList<String>();
-        testList.add("Water");
-        testList.add("Coffee");
+        HashMap<String, String> map = new HashMap<String, String>();
+        map.put("1", "Water");
+        map.put("2", "Coffee");
+        Board board = new Board(map);
+
         HumanPlayer testHuman = new HumanPlayer(testMark, testInPutter, testOutPutter, testMessenger);
-        String receivedMessage = new String(testHuman.getMove(testList));
+        String receivedMessage = new String(testHuman.getMove(board));
         testOutPutter.printOutput(receivedMessage);
+
         Assert.assertEquals(receivedMessage, testMessage);
 
     }
 
-    @Test public void itShouldRecurseUponReceivingImproperInput() {
-        OutputHandler testOutPutter = new OutputHandler(System.out);
-        // need a way to send a second message here
-        MessageHandler testMessenger =  new MessageHandler(testOutPutter);
-        String testMessage = new String("5\n7");
-        InputHandler testInPutter = new InputHandler(new ByteArrayInputStream(testMessage.getBytes()));
-        String testMark = "X";
-        List<String> testList = new LinkedList<String>();
-        testList.add("1");
-        testList.add("2");
-        testList.add("7");
-        HumanPlayer testHuman = new HumanPlayer(testMark, testInPutter, testOutPutter, testMessenger);
-        String receivedMessage = new String(testHuman.getMove(testList));
-        testOutPutter.printOutput(receivedMessage);
-        //Assert.assertEquals("7", receivedMessage);
-    }
+//    @Test public void itShouldRecurseUponReceivingImproperInput() {
+//        OutputHandler testOutPutter = new OutputHandler(System.out);
+//        MessageHandler testMessenger =  new MessageHandler(testOutPutter);
+//        String testMessage = new String("5\n7");
+//        InputHandler testInPutter = new InputHandler(new ByteArrayInputStream(testMessage.getBytes()));
+//        String testMark = "X";
+//
+//        HashMap<String, String> map = new HashMap<String, String>();
+//        map.put("1", "1");
+//        map.put("2", "2");
+//        map.put("7", "7");
+//        Board board = new Board(map);
+//
+//
+//        HumanPlayer testHuman = new HumanPlayer(testMark, testInPutter, testOutPutter, testMessenger);
+//
+//        String receivedMessage = new String(testHuman.getMove(board));
+//
+//        testOutPutter.printOutput(receivedMessage);
+//        Assert.assertEquals("7", receivedMessage);
+//    }
 
 
 }

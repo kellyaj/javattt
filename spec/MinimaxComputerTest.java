@@ -21,17 +21,7 @@ public class MinimaxComputerTest {
     @Test
     public void itShouldChooseObviousWin() {
         String playerMark = "X";
-        HashMap<String, String> positions = new HashMap<String, String>();
-        positions.put("1", "1");
-        positions.put("2", "X");
-        positions.put("3", "X");
-        positions.put("4", "O");
-        positions.put("5", "X");
-        positions.put("6", "O");
-        positions.put("7", "O");
-        positions.put("8", "O");
-        positions.put("9", "X");
-        Board gameBoard = new Board(positions);
+        Board gameBoard = new Board(new String[] {"1", "X", "X", "O", "X", "O", "O", "O", "X"});
         MinimaxComputer testComputer = new MinimaxComputer(playerMark);
         Assert.assertEquals("1", testComputer.getMove(gameBoard));
     }

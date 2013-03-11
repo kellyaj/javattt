@@ -45,11 +45,11 @@ public class Game {
     }
 
     public String getPlayerMove() {
-        return currentPlayer.getMove(gameBoard.availableSpots());
+        return currentPlayer.getMove(gameBoard);
     }
 
     public void placePlayerMove() {
-        gameBoard.placeMove(getPlayerMove(), currentPlayer.mark);
+        gameBoard.placeMove(getPlayerMove(), currentPlayer.getMark());
     }
 
     public void cyclePlayers() {
