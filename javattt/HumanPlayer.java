@@ -55,6 +55,7 @@ public class HumanPlayer implements Player {
             listString += s + "\t";
         }
         outPutter.printOutput(listString);
+        outPutter.printOutput(" \n");
     }
 
   // void thing

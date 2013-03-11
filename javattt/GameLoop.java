@@ -5,7 +5,7 @@ import java.io.InputStream;
 import java.io.OutputStream;
 
 public class GameLoop {
-    private Game currentGame;
+    private static Game currentGame;
     public OutputHandler outPutter;
     public InputHandler inPutter;
     private MessageHandler messagePutter;
@@ -13,6 +13,7 @@ public class GameLoop {
     public OutputStream outPutterStream;
     private Player firstPlayer;
     private Player secondPlayer;
+    private Player[] chosenPlayers;
 
     public GameLoop(InputStream newInputStream, OutputStream newOutStream) {
         inPutter = new InputHandler(newInputStream);
@@ -33,24 +34,24 @@ public class GameLoop {
         messagePutter = new MessageHandler(outPutter);
     }
 
-//    public void startGame(Game currentGame) {
-//        this.playGame(currentGame);
-//    }
-//
-//    public void playGame(Game theGame) {
-//        while (!theGame.isGameOver()) {
-//              theGame.printBoard();
-//              theGame.placePlayerMove();
-//              if (theGame.isGameOver()) {
-//                  theGame.printBoard();
-//                  break;
-//              }
-//              theGame.cyclePlayers();
-//        }
-//        if (playAgain()) {
-//            playGame(createGame(inPutterStream, outPutterStream));
-//        }
-//    }
+    public void startGame(Game currentGame) {
+        this.playGame(currentGame);
+    }
+
+    public void playGame(Game theGame) {
+        while (!theGame.isGameOver(theGame.gameBoard)) {
+              theGame.printBoard();
+              theGame.placePlayerMove();
+              if (theGame.isGameOver(theGame.gameBoard)) {
+                  theGame.printBoard();
+                  break;
+              }
+              theGame.cyclePlayers();
+        }
+        if (playAgain()) {
+            playGame(createGame(inPutterStream, outPutterStream, chosenPlayers[0], chosenPlayers[1]));
+        }
+    }
 
     public boolean playAgain() {
         messagePutter.playAgainMessage();
@@ -63,12 +64,12 @@ public class GameLoop {
     }
 
     public Player[] choosePlayers() {
-        Player[] playerArray = new Player[2];
+        chosenPlayers = new Player[2];
         messagePutter.firstPlayerMessage();
-        playerArray[0] = createPlayer(inPutter.getInput(), "X");
+        chosenPlayers[0] = createPlayer(inPutter.getInput(), "X");
         messagePutter.secondPlayerMessage();
-        playerArray[1] = createPlayer(inPutter.getInput(), "O");
-        return playerArray;
+        chosenPlayers[1] = createPlayer(inPutter.getInput(), "O");
+        return chosenPlayers;
     }
 
     public Player createPlayer(String rawUserChoice, String playerMark) {
@@ -77,6 +78,12 @@ public class GameLoop {
         } else {
             return new MinimaxComputer(playerMark);
         }
+    }
+
+    public static void main(String[] args) {
+        GameLoop theLoop = new GameLoop();
+        theLoop.startGame(currentGame);
+
     }
 
 }

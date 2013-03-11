@@ -55,7 +55,7 @@ public class MinimaxComputer implements Player {
             while (newItr.hasNext()) {
                 tempSpotScore = newItr.next().toString();
             }
-            Double spotScore = Double.parseDouble(tempSpotScore);
+            Double spotScore = -Double.parseDouble(tempSpotScore);
             gameBoard.placeMove(spot, spot);
             if (spotScore > highestScore) {
                 primeMove = spot;
@@ -70,17 +70,17 @@ public class MinimaxComputer implements Player {
 
     public double scoreMove(Board gameBoard, String currentPlayer, int depth) {
         if (gameScorer.isGameWon(gameBoard.getPositions())) {
-            return (1.0 / depth);         // this was negative in Ruby
+            return -(1.0 / depth);         // this was negative in Ruby
         } else {
             return 0;
         }
     }
 
     public String cyclePlayers(String currentPlayer) {
-        if (currentPlayer == xPlayer) {
-            return oPlayer;
+        if (currentPlayer.equals("X")) {
+            return "O";
         } else {
-            return xPlayer;
+            return "X";
         }
     }
 

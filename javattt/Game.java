@@ -36,7 +36,7 @@ public class Game {
         gamePrinter = new Printer(outPutter);
         gameScorer = new Scorer();
         player1 = new HumanPlayer(new String("X"), inPutter, outPutter, messagePutter);
-        player2 = new EasyComputer();
+        player2 = new MinimaxComputer();
         currentPlayer = player1;
     }
 

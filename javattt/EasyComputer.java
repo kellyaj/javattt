@@ -1,6 +1,4 @@
 package javattt;
-import sun.jvm.hotspot.memory.FreeList;
-import java.util.List;
 import java.util.Random;
 
 public class EasyComputer implements Player {
