@@ -4,7 +4,7 @@ This is the Java version of my Tic-Tac-Toe game. It supports both Human and AI p
 
 To play in the terminal, follow these steps:
 
-1) Navigate to the project's root directory
+1) Clone this repository and cd into it
 
-2) Type: java javattt/GameLoop
+2) from the project's root directory, type: java javattt/GameLoop
 
