@@ -13,14 +13,12 @@ public class HumanPlayer implements Player {
 
   // constructor
   public HumanPlayer(String playerMark, InputHandler newInPutter, OutputHandler newOutPutter, MessageHandler newMessagePutter) {
-      //super(playerMark);
       mark = playerMark;
       inPutter = newInPutter;
       outPutter = newOutPutter;
       messagePutter = newMessagePutter;
   }
   public HumanPlayer() {
-      //super(new String("X"));
       mark = "X";
       inPutter = new InputHandler(System.in);
       outPutter = new OutputHandler(System.out);
@@ -29,27 +27,24 @@ public class HumanPlayer implements Player {
 
   // methods
   public String getMove(Board gameBoard) {
-
     List<String> availableMoves = gameBoard.availableSpots();
     messagePutter.chooseMovePrompt();
     displayAvailableMoves(availableMoves);
     String chosenMove = inPutter.getInput();
-      if (availableMoves.contains(chosenMove)) {
-          return chosenMove;
-      } else {
+      if (!availableMoves.contains(chosenMove)) {
           messagePutter.invalidMoveMessage();
-          messagePutter.chooseMovePrompt();
-          this.getMove(gameBoard);   // choose move again
+          chosenMove = this.getMove(gameBoard);
       }
      return chosenMove;
   }
+
 
     public String getMark() {
         return this.mark;
     }
 
     public void displayAvailableMoves(List<String> availableMoves) {
-        String[] spotsArray = availableMoves.toArray(new String[0]);     // should I use ArrayList here? Array size issue
+        String[] spotsArray = availableMoves.toArray(new String[0]);
         String listString = "";
         for (String s : spotsArray) {
             listString += s + "\t";
