@@ -1,7 +1,6 @@
 package javattt;
 
 import java.util.List;
-import java.util.Scanner;
 
 public class HumanPlayer implements Player {
   //fields
@@ -29,7 +28,6 @@ public class HumanPlayer implements Player {
   public String getMove(Board gameBoard) {
     List<String> availableMoves = gameBoard.availableSpots();
     messagePutter.chooseMovePrompt();
-    displayAvailableMoves(availableMoves);
     String chosenMove = inPutter.getInput();
       if (!availableMoves.contains(chosenMove)) {
           messagePutter.invalidMoveMessage();

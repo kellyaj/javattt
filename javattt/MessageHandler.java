@@ -21,7 +21,7 @@ public class MessageHandler {
     }
 
     public void chooseMovePrompt() {
-        outPutter.printOutput("Please enter a number to choose a move: ");
+        outPutter.printOutput("Please enter a number to choose a move: \n");
     }
 
     public void invalidMoveMessage() {
@@ -29,15 +29,15 @@ public class MessageHandler {
     }
 
     public void playAgainMessage() {
-        outPutter.printOutput("Would you like to play again? Type 'yes' or 'no'");
+        outPutter.printOutput("Would you like to play again? Type 'yes' or 'no'\n");
     }
 
     public void firstPlayerMessage() {
-        outPutter.printOutput("The first player is... type 'human' or 'computer'");
+        outPutter.printOutput("The first player is... type 'human' or 'computer'\n");
     }
 
     public void secondPlayerMessage() {
-        outPutter.printOutput("The second player is... type 'human' or 'computer'");
+        outPutter.printOutput("The second player is... type 'human' or 'computer'\n");
 
     }
 
