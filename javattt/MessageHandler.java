@@ -13,11 +13,11 @@ public class MessageHandler {
     }
 
     public void winnerMessage(String playerMark) {
-        outPutter.printOutput(playerMark + " has won the game");
+        outPutter.printOutput(playerMark + " has won the game. \n");
     }
 
     public void stalemateMessage() {
-        outPutter.printOutput("The game has ended in a stalemate.");
+        outPutter.printOutput("The game has ended in a stalemate. \n");
     }
 
     public void chooseMovePrompt() {
@@ -25,7 +25,7 @@ public class MessageHandler {
     }
 
     public void invalidMoveMessage() {
-        outPutter.printOutput("Invalid move.");
+        outPutter.printOutput("Invalid move. \n");
     }
 
     public void playAgainMessage() {

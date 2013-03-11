@@ -61,7 +61,13 @@ public class Game {
     }
 
     public boolean isGameOver(Board gameBoard) {
-        return gameScorer.isGameOver(gameBoard.getPositions(), gameBoard.availableSpots());
+        boolean result = gameScorer.isGameOver(gameBoard.getPositions(), gameBoard.availableSpots());
+        if (gameScorer.isGameWon(gameBoard.getPositions())) {
+            messagePutter.winnerMessage(currentPlayer.getMark());
+        } else if (gameScorer.isGameStalemate(gameBoard.availableSpots())) {
+            messagePutter.stalemateMessage();
+        }
+        return result;
     }
 
     public boolean isGameWon(HashMap<String, String> boardPositions) {
