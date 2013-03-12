@@ -3,12 +3,11 @@ package javattt;
 
 import java.util.ArrayList;
 import java.util.HashMap;
-import java.util.Iterator;
 import java.util.List;
 
 public class Scorer {
-    // there's got to be a better way to do this
-    public static String[][] winCombos;
+
+    private static String[][] winCombos;
 
     public Scorer() {
         winCombos = new String[][]{
@@ -35,7 +34,7 @@ public class Scorer {
                 currentRow.clear();
             }
         }
-      return false;
+        return false;
     }
 
     public boolean isGameStalemate(List<String> availableSpots) {
@@ -49,6 +48,10 @@ public class Scorer {
             return true;
         }
         return false;
+    }
+
+    public String[][] getWinCombos() {
+        return this.winCombos;
     }
 
 

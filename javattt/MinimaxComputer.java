@@ -34,10 +34,9 @@ public class MinimaxComputer implements Player {
     }
 
     public HashMap<Double, String> miniMaxMove(Board gameBoard, String currentPlayer, int depth) {
-        //double spotScore = -1;
         String primeMove = null;
         double highestScore = -1;
-        depth = depth;       // need a way to depth = 0 as a param like in Ruby
+        depth = depth;
         if (gameScorer.isGameOver(gameBoard.getPositions(), gameBoard.availableSpots())) {
             HashMap<Double, String> scoreMap = new HashMap<Double, String>();
             scoreMap.put(scoreMove(gameBoard, currentPlayer, depth), null);
@@ -49,7 +48,7 @@ public class MinimaxComputer implements Player {
         while (itr.hasNext()) {
             String spot = itr.next().toString();
             gameBoard.placeMove(spot, currentPlayer);
-            Set currentSet = miniMaxMove(gameBoard, cyclePlayers(currentPlayer), depth).keySet();   // this was negative in Ruby
+            Set currentSet = miniMaxMove(gameBoard, cyclePlayers(currentPlayer), depth).keySet();
             Iterator newItr = currentSet.iterator();
             String tempSpotScore = "";
             while (newItr.hasNext()) {
@@ -70,7 +69,7 @@ public class MinimaxComputer implements Player {
 
     public double scoreMove(Board gameBoard, String currentPlayer, int depth) {
         if (gameScorer.isGameWon(gameBoard.getPositions())) {
-            return -(1.0 / depth);         // this was negative in Ruby
+            return -(1.0 / depth);
         } else {
             return 0;
         }
