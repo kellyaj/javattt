@@ -5,21 +5,14 @@ import java.util.*;
 public class MinimaxComputer implements Player {
 
     public String mark;
-    private Scorer gameScorer;
-    private String xPlayer;
-    private String oPlayer;
 
     public MinimaxComputer(String playerMark) {
-        gameScorer = new Scorer();
-        xPlayer = "X";
-        oPlayer = "O";
         this.mark = playerMark;
 
     }
 
     public MinimaxComputer() {
         this.mark = "O";
-        gameScorer = new Scorer();
     }
 
     public String getMove(Board gameBoard) {
@@ -37,7 +30,7 @@ public class MinimaxComputer implements Player {
         String primeMove = null;
         double highestScore = -1;
         depth = depth;
-        if (gameScorer.isGameOver(gameBoard.getPositions(), gameBoard.availableSpots())) {
+        if (Scorer.isGameOver(gameBoard.getPositions(), gameBoard.availableSpots())) {
             HashMap<Double, String> scoreMap = new HashMap<Double, String>();
             scoreMap.put(scoreMove(gameBoard, currentPlayer, depth), null);
             return scoreMap;
@@ -68,7 +61,7 @@ public class MinimaxComputer implements Player {
     }
 
     public double scoreMove(Board gameBoard, String currentPlayer, int depth) {
-        if (gameScorer.isGameWon(gameBoard.getPositions())) {
+        if (Scorer.isGameWon(gameBoard.getPositions())) {
             return -(1.0 / depth);
         } else {
             return 0;

@@ -50,7 +50,6 @@ public class GameLoop {
               theGame.cyclePlayers();
         }
         if (playAgain()) {
-            System.out.println("got here");
             playGame(createGame(inPutterStream, outPutterStream, chosenPlayers[0], chosenPlayers[1]));
         }
     }
