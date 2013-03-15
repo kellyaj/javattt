@@ -12,8 +12,7 @@ public class ScorerTest {
 
     @Test
     public void itShouldInitializeWithWinCombos() {
-        Scorer gameScorer = new Scorer();
-        String[] firstRow = gameScorer.getWinCombos()[0];
+        String[] firstRow = Scorer.getWinCombos()[0];
         String[] expectedRow = {"1", "2", "3"};
         Assert.assertArrayEquals(expectedRow, firstRow);
     }
@@ -31,8 +30,7 @@ public class ScorerTest {
         newPositions.put("8", "8");
         newPositions.put("9", "9");
         HashMap<String, String> positions = newPositions;
-        Scorer gameScorer = new Scorer();
-        Assert.assertTrue(gameScorer.isGameWon(positions));
+        Assert.assertTrue(Scorer.isGameWon(positions));
     }
 
     @Test
@@ -48,8 +46,7 @@ public class ScorerTest {
         newPositions.put("8", "8");
         newPositions.put("9", "9");
         HashMap<String, String> positions = newPositions;
-        Scorer gameScorer = new Scorer();
-        Assert.assertTrue(gameScorer.isGameWon(positions));
+        Assert.assertTrue(Scorer.isGameWon(positions));
     }
 
     @Test
@@ -65,8 +62,7 @@ public class ScorerTest {
         newPositions.put("8", "8");
         newPositions.put("9", "X");
         HashMap<String, String> positions = newPositions;
-        Scorer gameScorer = new Scorer();
-        Assert.assertTrue(gameScorer.isGameWon(positions));
+        Assert.assertTrue(Scorer.isGameWon(positions));
     }
 
     @Test
@@ -82,22 +78,19 @@ public class ScorerTest {
         newPositions.put("8", "8");
         newPositions.put("9", "9");
         HashMap<String, String> positions = newPositions;
-        Scorer gameScorer = new Scorer();
-        Assert.assertFalse(gameScorer.isGameWon(positions));
+        Assert.assertFalse(Scorer.isGameWon(positions));
     }
 
     @Test
     public void itShouldReturnTrueIfStalemate() {
         List<String> availableSpots = new LinkedList<String>();
-        Scorer gameScorer = new Scorer();
-        Assert.assertTrue(gameScorer.isGameStalemate(availableSpots));
+        Assert.assertTrue(Scorer.isGameStalemate(availableSpots));
     }
 
     @Test
     public void itShouldReturnFalseIfNotStalemate() {
         List<String> availableSpots = new LinkedList<String>();
         availableSpots.add("1");
-        Scorer gameScorer = new Scorer();
-        Assert.assertFalse(gameScorer.isGameStalemate(availableSpots));
+        Assert.assertFalse(Scorer.isGameStalemate(availableSpots));
     }
 }

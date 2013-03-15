@@ -18,7 +18,7 @@ public class Game {
         gameBoard = theBoard;
         outPutter = new OutputHandler(newOutStream);
         inPutter = new InputHandler(newInStream);
-        gamePrinter = new Printer(outPutter);
+        //gamePrinter = new Printer(outPutter);
         messagePutter = new MessageHandler(outPutter);
         player1 = firstPlayer;
         player2 = secondPlayer;
@@ -31,14 +31,14 @@ public class Game {
         outPutter = new OutputHandler(System.out);
         inPutter = new InputHandler(System.in);
         messagePutter = new MessageHandler(outPutter);
-        gamePrinter = new Printer(outPutter);
+        //gamePrinter = new Printer(outPutter);
         player1 = new HumanPlayer(new String("X"), inPutter, outPutter, messagePutter);
         player2 = new MinimaxComputer();
         currentPlayer = player1;
     }
 
     public void printBoard() {
-        gamePrinter.printBoard(gameBoard);
+        Printer.printBoard(outPutter, gameBoard);
     }
 
     public String getPlayerMove() {
