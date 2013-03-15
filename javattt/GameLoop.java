@@ -11,8 +11,6 @@ public class GameLoop {
     private MessageHandler messagePutter;
     public InputStream inPutterStream;
     public OutputStream outPutterStream;
-    private Player firstPlayer;
-    private Player secondPlayer;
     private Player[] chosenPlayers;
 
     public GameLoop(InputStream newInputStream, OutputStream newOutStream) {

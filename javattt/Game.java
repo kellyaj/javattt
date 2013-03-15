@@ -6,7 +6,6 @@ import java.util.HashMap;
 
 public class Game {
     public Board gameBoard;
-    private Printer gamePrinter;
     public OutputHandler outPutter;
     public InputHandler inPutter;
     public MessageHandler messagePutter;
