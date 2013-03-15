@@ -3,26 +3,22 @@ package javattt;
 
 import java.util.ArrayList;
 import java.util.HashMap;
+import java.util.Iterator;
 import java.util.List;
 
 public class Scorer {
+    public static final String[][] winCombos = new String[][]{
+        {"1", "2", "3"},
+        {"4", "5", "6"},
+        {"7", "8", "9"},
+        {"1", "4", "7"},
+        {"2", "5", "8"},
+        {"3", "6", "9"},
+        {"1", "5", "9"},
+        {"3", "5", "7"}
+    };
 
-    private static String[][] winCombos;
-
-    public Scorer() {
-        winCombos = new String[][]{
-                {"1", "2", "3"},
-                {"4", "5", "6"},
-                {"7", "8", "9"},
-                {"1", "4", "7"},
-                {"2", "5", "8"},
-                {"3", "6", "9"},
-                {"1", "5", "9"},
-                {"3", "5", "7"}
-        };
-    }
-
-    public boolean isGameWon(HashMap<String, String> gameBoard) {
+    public static boolean isGameWon(HashMap<String, String> gameBoard) {
         for (String[] row : winCombos) {
             ArrayList<String> currentRow = new ArrayList<String>();
             for (String i : row) {
@@ -34,14 +30,14 @@ public class Scorer {
                 currentRow.clear();
             }
         }
-        return false;
+      return false;
     }
 
-    public boolean isGameStalemate(List<String> availableSpots) {
+    public static boolean isGameStalemate(List<String> availableSpots) {
         return availableSpots.size() == 0;
     }
 
-    public boolean isGameOver(HashMap<String, String> gameBoard, List<String> availableSpots) {
+    public static boolean isGameOver(HashMap<String, String> gameBoard, List<String> availableSpots) {
         if (isGameWon(gameBoard)) {
             return true;
         } else if (isGameStalemate(availableSpots)) {
@@ -50,10 +46,8 @@ public class Scorer {
         return false;
     }
 
-    public String[][] getWinCombos() {
-        return this.winCombos;
+    public static String[][] getWinCombos() {
+        return winCombos;
     }
-
-
 
 }

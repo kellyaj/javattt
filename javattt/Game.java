@@ -7,7 +7,6 @@ import java.util.HashMap;
 public class Game {
     public Board gameBoard;
     private Printer gamePrinter;
-    public Scorer gameScorer;
     public OutputHandler outPutter;
     public InputHandler inPutter;
     public MessageHandler messagePutter;
@@ -21,7 +20,6 @@ public class Game {
         inPutter = new InputHandler(newInStream);
         gamePrinter = new Printer(outPutter);
         messagePutter = new MessageHandler(outPutter);
-        gameScorer = new Scorer();
         player1 = firstPlayer;
         player2 = secondPlayer;
         currentPlayer = firstPlayer;
@@ -34,7 +32,6 @@ public class Game {
         inPutter = new InputHandler(System.in);
         messagePutter = new MessageHandler(outPutter);
         gamePrinter = new Printer(outPutter);
-        gameScorer = new Scorer();
         player1 = new HumanPlayer(new String("X"), inPutter, outPutter, messagePutter);
         player2 = new MinimaxComputer();
         currentPlayer = player1;
@@ -61,21 +58,21 @@ public class Game {
     }
 
     public boolean isGameOver(Board gameBoard) {
-        boolean result = gameScorer.isGameOver(gameBoard.getPositions(), gameBoard.availableSpots());
-        if (gameScorer.isGameWon(gameBoard.getPositions())) {
+        boolean result = Scorer.isGameOver(gameBoard.getPositions(), gameBoard.availableSpots());
+        if (Scorer.isGameWon(gameBoard.getPositions())) {
             messagePutter.winnerMessage(currentPlayer.getMark());
-        } else if (gameScorer.isGameStalemate(gameBoard.availableSpots())) {
+        } else if (Scorer.isGameStalemate(gameBoard.availableSpots())) {
             messagePutter.stalemateMessage();
         }
         return result;
     }
 
     public boolean isGameWon(HashMap<String, String> boardPositions) {
-        return gameScorer.isGameWon(boardPositions);
+        return Scorer.isGameWon(boardPositions);
     }
 
     public boolean isGameStalemate() {
-        return gameScorer.isGameStalemate(gameBoard.availableSpots());
+        return Scorer.isGameStalemate(gameBoard.availableSpots());
     }
 
 
