@@ -2,11 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="b7a5fd5e-05bd-4d6e-bc34-6002083ad1f2" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/javattt/GameLoop.class" afterPath="$PROJECT_DIR$/javattt/GameLoop.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/javattt/MessageHandler.class" afterPath="$PROJECT_DIR$/javattt/MessageHandler.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/javattt/GameLoop.java" afterPath="$PROJECT_DIR$/javattt/GameLoop.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/javattt/MessageHandler.java" afterPath="$PROJECT_DIR$/javattt/MessageHandler.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/javattt/Scorer.class" afterPath="$PROJECT_DIR$/javattt/Scorer.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/javattt/Scorer.java" afterPath="$PROJECT_DIR$/javattt/Scorer.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/spec/ScorerTest.java" afterPath="$PROJECT_DIR$/spec/ScorerTest.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="javattt.iws" />
@@ -19,7 +17,7 @@
     <file path="/PrinterTest.java" changelist="b7a5fd5e-05bd-4d6e-bc34-6002083ad1f2" time="1363375940464" ignored="false" />
     <file path="/EasyComputer.java" changelist="b7a5fd5e-05bd-4d6e-bc34-6002083ad1f2" time="1362779539472" ignored="false" />
     <file path="/EasyComputerTest.java" changelist="b7a5fd5e-05bd-4d6e-bc34-6002083ad1f2" time="1363634759127" ignored="false" />
-    <file path="/Scorer.java" changelist="b7a5fd5e-05bd-4d6e-bc34-6002083ad1f2" time="1363641949377" ignored="false" />
+    <file path="/Scorer.java" changelist="b7a5fd5e-05bd-4d6e-bc34-6002083ad1f2" time="1363642966702" ignored="false" />
     <file path="/InputHandler.java" changelist="b7a5fd5e-05bd-4d6e-bc34-6002083ad1f2" time="1362783525081" ignored="false" />
     <file path="/OutputHandler.java" changelist="b7a5fd5e-05bd-4d6e-bc34-6002083ad1f2" time="1362172474207" ignored="false" />
     <file path="/ScorerTest.java" changelist="b7a5fd5e-05bd-4d6e-bc34-6002083ad1f2" time="1363635024293" ignored="false" />
@@ -104,10 +102,10 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Scorer.java" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="Scorer.java" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/javattt/Scorer.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="20" column="49" selection-start="485" selection-end="485" vertical-scroll-proportion="0.33632287">
+            <state line="50" column="89" selection-start="1682" selection-end="1682" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -145,23 +143,17 @@
       <file leaf-file-name="MinimaxComputer.java" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/javattt/MinimaxComputer.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="37" column="86" selection-start="1115" selection-end="1115" vertical-scroll-proportion="0.0">
+            <state line="19" column="86" selection-start="382" selection-end="382" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="MinimaxComputerTest.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/spec/MinimaxComputerTest.java">
+      <file leaf-file-name="Printer.java" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/javattt/Printer.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="32" column="15" selection-start="934" selection-end="934" vertical-scroll-proportion="0.0">
-              <folding>
-                <element signature="e#970#978#0" expanded="true" />
-                <element signature="e#1606#1614#0" expanded="true" />
-                <element signature="e#2243#2251#0" expanded="true" />
-                <element signature="e#2869#2877#0" expanded="true" />
-                <element signature="e#3497#3505#0" expanded="true" />
-              </folding>
+            <state line="15" column="63" selection-start="899" selection-end="899" vertical-scroll-proportion="0.5196305">
+              <folding />
             </state>
           </provider>
         </entry>
@@ -169,12 +161,12 @@
       <file leaf-file-name="ScorerTest.java" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/spec/ScorerTest.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="29" column="46" selection-start="813" selection-end="813" vertical-scroll-proportion="0.0">
+            <state line="13" column="66" selection-start="230" selection-end="230" vertical-scroll-proportion="0.0">
               <folding>
-                <element signature="e#564#572#0" expanded="true" />
-                <element signature="e#1066#1074#0" expanded="true" />
-                <element signature="e#1570#1578#0" expanded="true" />
-                <element signature="e#2066#2074#0" expanded="true" />
+                <element signature="e#565#573#0" expanded="true" />
+                <element signature="e#1067#1075#0" expanded="true" />
+                <element signature="e#1571#1579#0" expanded="true" />
+                <element signature="e#2067#2075#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -226,12 +218,12 @@
         <option value="$PROJECT_DIR$/spec/MinimaxComputerTest.java" />
         <option value="$PROJECT_DIR$/spec/EasyComputerTest.java" />
         <option value="$PROJECT_DIR$/javattt/Printer.java" />
-        <option value="$PROJECT_DIR$/spec/ScorerTest.java" />
         <option value="$PROJECT_DIR$/spec/BoardTest.java" />
         <option value="$PROJECT_DIR$/javattt/Board.java" />
         <option value="$PROJECT_DIR$/javattt/MessageHandler.java" />
         <option value="$PROJECT_DIR$/javattt/GameLoop.java" />
         <option value="$PROJECT_DIR$/javattt/Scorer.java" />
+        <option value="$PROJECT_DIR$/spec/ScorerTest.java" />
       </list>
     </option>
   </component>
@@ -727,13 +719,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/javattt/Printer.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="12" column="132" selection-start="797" selection-end="797" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="jar:///Library/Java/JavaVirtualMachines/jdk1.7.0_15.jdk/Contents/Home/src.zip!/java/util/HashMap.java">
       <provider selected="true" editor-type-id="text-editor">
         <state line="123" column="13" selection-start="5260" selection-end="5260" vertical-scroll-proportion="0.33183858">
@@ -757,18 +742,6 @@
             <element signature="e#2243#2251#0" expanded="true" />
             <element signature="e#2869#2877#0" expanded="true" />
             <element signature="e#3497#3505#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/spec/ScorerTest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="29" column="46" selection-start="813" selection-end="813" vertical-scroll-proportion="0.0">
-          <folding>
-            <element signature="e#564#572#0" expanded="true" />
-            <element signature="e#1066#1074#0" expanded="true" />
-            <element signature="e#1570#1578#0" expanded="true" />
-            <element signature="e#2066#2074#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -819,16 +792,35 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/javattt/MinimaxComputer.java">
+    <entry file="file://$PROJECT_DIR$/spec/ScorerTest.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="37" column="86" selection-start="1115" selection-end="1115" vertical-scroll-proportion="0.0">
-          <folding />
+        <state line="13" column="66" selection-start="230" selection-end="230" vertical-scroll-proportion="0.0">
+          <folding>
+            <element signature="e#565#573#0" expanded="true" />
+            <element signature="e#1067#1075#0" expanded="true" />
+            <element signature="e#1571#1579#0" expanded="true" />
+            <element signature="e#2067#2075#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/javattt/Scorer.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="20" column="49" selection-start="485" selection-end="485" vertical-scroll-proportion="0.33632287">
+        <state line="50" column="89" selection-start="1682" selection-end="1682" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/javattt/MinimaxComputer.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="19" column="86" selection-start="382" selection-end="382" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/javattt/Printer.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="15" column="63" selection-start="899" selection-end="899" vertical-scroll-proportion="0.5196305">
           <folding />
         </state>
       </provider>
