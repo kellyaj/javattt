@@ -20,7 +20,7 @@ public class GameLoop {
         outPutterStream = newOutStream;
         messagePutter = new MessageHandler(outPutter);
         Player[] chosenPlayers = choosePlayers();
-        currentGame = createGame(newInputStream, newOutStream, chosenPlayers[0], chosenPlayers[1]);
+        currentGame = createGame(chooseBoard(), newInputStream, newOutStream, chosenPlayers[0], chosenPlayers[1]);
     }
 
     public GameLoop() {
@@ -30,7 +30,7 @@ public class GameLoop {
         outPutterStream = System.out;
         messagePutter = new MessageHandler(outPutter);
         Player[] chosenPlayers = choosePlayers();
-        currentGame = createGame(inPutterStream, outPutterStream, chosenPlayers[0], chosenPlayers[1]);
+        currentGame = createGame(chooseBoard(), inPutterStream, outPutterStream, chosenPlayers[0], chosenPlayers[1]);
     }
 
     public void startGame(Game currentGame) {
@@ -48,7 +48,7 @@ public class GameLoop {
               theGame.cyclePlayers();
         }
         if (playAgain()) {
-            playGame(createGame(inPutterStream, outPutterStream, chosenPlayers[0], chosenPlayers[1]));
+            playGame(createGame(chooseBoard(), inPutterStream, outPutterStream, chosenPlayers[0], chosenPlayers[1]));
         }
     }
 
@@ -58,8 +58,8 @@ public class GameLoop {
         return response.equals("yes");
     }
 
-    public Game createGame(InputStream gameInputStream, OutputStream gameOutputStream, Player gameFirstPlayer, Player gameSecondPlayer) {
-        return new Game(new Board(),gameInputStream, gameOutputStream, gameFirstPlayer, gameSecondPlayer);
+    public Game createGame(Board newBoard, InputStream gameInputStream, OutputStream gameOutputStream, Player gameFirstPlayer, Player gameSecondPlayer) {
+        return new Game(newBoard, gameInputStream, gameOutputStream, gameFirstPlayer, gameSecondPlayer);
     }
 
     public Player[] choosePlayers() {
@@ -69,6 +69,20 @@ public class GameLoop {
         messagePutter.secondPlayerMessage();
         chosenPlayers[1] = createPlayer(inPutter.getInput(), "O");
         return chosenPlayers;
+    }
+
+    public Board chooseBoard() {
+        messagePutter.boardSizeMessage();
+        String boardChoice = inPutter.getInput();
+        if (boardChoice.equals("1")) {
+            return new Board();
+        } else if (boardChoice.equals("2")) {
+            String[] spots = {"1", "2", "3", "4", "5", "6", "7", "8", "9", "10", "11", "12", "13", "14", "15", "16"};
+            return new Board(spots);
+        } else {
+            messagePutter.invalidBoardSizeMessage();
+            return this.chooseBoard();
+        }
     }
 
     public Player createPlayer(String rawUserChoice, String playerMark) {

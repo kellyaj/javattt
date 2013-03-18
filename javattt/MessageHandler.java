@@ -41,4 +41,15 @@ public class MessageHandler {
 
     }
 
+    public void boardSizeMessage() {
+        outPutter.printOutput("Choose your board size: \n");
+        outPutter.printOutput("1. 3x3 \n");
+        outPutter.printOutput("2. 4x4 \n");
+        outPutter.printOutput("Please enter '1' or '2' \n");
+    }
+
+    public void invalidBoardSizeMessage() {
+        outPutter.printOutput("Invalid selection.\n");
+    }
+
 }

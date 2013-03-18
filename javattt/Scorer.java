@@ -17,6 +17,10 @@ public class Scorer {
         {"3", "5", "7"}
     };
 
+    public String[][] getWinCombos(int Size) {
+        // use size to determine indexes or stuff
+    }
+
     public static boolean isGameWon(ArrayList<String> gameBoard) {
         for (String[] row : winCombos) {
             ArrayList<String> currentRow = new ArrayList<String>();
