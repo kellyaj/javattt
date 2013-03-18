@@ -61,4 +61,15 @@ public class BoardTest {
     int listSize = untakenSpots.size();
     Assert.assertEquals(listSize, 9);
    }
+
+  @Test
+    public void itShouldCreateWithA4x4Array() {
+      String[] spots = {"1", "2", "3", "4", "5", "6", "7", "8", "9", "10", "11", "12", "13", "14", "15", "16"};
+      Board board = new Board(spots);
+      HashMap<String, String> positions = board.getPositions();
+      for (int i=0; i < positions.size(); i++) {
+          String key = Integer.toString(i+1);
+          Assert.assertEquals(spots[i], positions.get(key));
+      }
+  }
 }

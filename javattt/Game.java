@@ -2,7 +2,6 @@ package javattt;
 
 import java.io.InputStream;
 import java.io.OutputStream;
-import java.util.HashMap;
 
 public class Game {
     public Board gameBoard;
@@ -64,13 +63,6 @@ public class Game {
         return result;
     }
 
-    public boolean isGameWon(HashMap<String, String> boardPositions) {
-        return Scorer.isGameWon(boardPositions);
-    }
-
-    public boolean isGameStalemate() {
-        return Scorer.isGameStalemate(gameBoard.availableSpots());
-    }
 
 
 
