@@ -4,6 +4,7 @@ import javattt.Scorer;
 import org.junit.Assert;
 import org.junit.Test;
 
+import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.LinkedList;
 import java.util.List;
@@ -19,66 +20,62 @@ public class ScorerTest {
 
     @Test
     public void itShouldReturnTrueIfWonCaseRow() {
-        HashMap<String, String> newPositions = new HashMap<String, String>();
-        newPositions.put("1", "X");
-        newPositions.put("2", "X");
-        newPositions.put("3", "X");
-        newPositions.put("4", "4");
-        newPositions.put("5", "5");
-        newPositions.put("6", "6");
-        newPositions.put("7", "7");
-        newPositions.put("8", "8");
-        newPositions.put("9", "9");
-        HashMap<String, String> positions = newPositions;
-        Assert.assertTrue(Scorer.isGameWon(positions));
+        ArrayList<String> newPositions = new ArrayList<String>();
+        newPositions.add(0, "X");
+        newPositions.add(1, "X");
+        newPositions.add(2, "X");
+        newPositions.add(3, "4");
+        newPositions.add(4, "5");
+        newPositions.add(5, "6");
+        newPositions.add(6, "7");
+        newPositions.add(7, "8");
+        newPositions.add(8, "9");
+        Assert.assertTrue(Scorer.isGameWon(newPositions));
     }
 
     @Test
     public void itShouldReturnTrueIfWonCaseColumn() {
-        HashMap<String, String> newPositions = new HashMap<String, String>();
-        newPositions.put("1", "X");
-        newPositions.put("2", "2");
-        newPositions.put("3", "3");
-        newPositions.put("4", "X");
-        newPositions.put("5", "5");
-        newPositions.put("6", "6");
-        newPositions.put("7", "X");
-        newPositions.put("8", "8");
-        newPositions.put("9", "9");
-        HashMap<String, String> positions = newPositions;
-        Assert.assertTrue(Scorer.isGameWon(positions));
+        ArrayList<String> newPositions = new ArrayList<String>();
+        newPositions.add(0, "X");
+        newPositions.add(1, "2");
+        newPositions.add(2, "3");
+        newPositions.add(3, "X");
+        newPositions.add(4, "5");
+        newPositions.add(5, "6");
+        newPositions.add(6, "X");
+        newPositions.add(7, "8");
+        newPositions.add(8, "9");
+        Assert.assertTrue(Scorer.isGameWon(newPositions));
     }
 
     @Test
     public void itShouldReturnTrueIfWonCaseDiagonal() {
-        HashMap<String, String> newPositions = new HashMap<String, String>();
-        newPositions.put("1", "X");
-        newPositions.put("2", "2");
-        newPositions.put("3", "3");
-        newPositions.put("4", "X");
-        newPositions.put("5", "X");
-        newPositions.put("6", "6");
-        newPositions.put("7", "7");
-        newPositions.put("8", "8");
-        newPositions.put("9", "X");
-        HashMap<String, String> positions = newPositions;
-        Assert.assertTrue(Scorer.isGameWon(positions));
+        ArrayList<String> newPositions = new ArrayList<String>();
+        newPositions.add(0, "X");
+        newPositions.add(1, "2");
+        newPositions.add(2, "3");
+        newPositions.add(3, "X");
+        newPositions.add(4, "X");
+        newPositions.add(5, "6");
+        newPositions.add(6, "7");
+        newPositions.add(7, "8");
+        newPositions.add(8, "X");
+        Assert.assertTrue(Scorer.isGameWon(newPositions));
     }
 
     @Test
     public void itShouldReturnFalseIfNotWon() {
-        HashMap<String, String> newPositions = new HashMap<String, String>();
-        newPositions.put("1", "X");
-        newPositions.put("2", "2");
-        newPositions.put("3", "X");
-        newPositions.put("4", "4");
-        newPositions.put("5", "5");
-        newPositions.put("6", "6");
-        newPositions.put("7", "7");
-        newPositions.put("8", "8");
-        newPositions.put("9", "9");
-        HashMap<String, String> positions = newPositions;
-        Assert.assertFalse(Scorer.isGameWon(positions));
+        ArrayList<String> newPositions = new ArrayList<String>();
+        newPositions.add(0, "X");
+        newPositions.add(1, "2");
+        newPositions.add(2, "X");
+        newPositions.add(3, "4");
+        newPositions.add(4, "5");
+        newPositions.add(5, "6");
+        newPositions.add(6, "7");
+        newPositions.add(7, "8");
+        newPositions.add(8, "9");
+        Assert.assertFalse(Scorer.isGameWon(newPositions));
     }
 
     @Test

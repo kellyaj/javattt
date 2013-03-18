@@ -5,48 +5,47 @@ import java.util.*;
 public class Board {
 
     // fields
-    private HashMap<String, String> positions;
+    private ArrayList<String> positions;
     private static String x = "X";
     private static String o = "O";
 
     // constructor
-    public Board(HashMap<String, String> startingSpots) {
+    public Board(ArrayList<String> startingSpots) {
         positions = startingSpots;
     }
 
     public Board() {
-        HashMap<String, String> newPositions = new HashMap<String, String>();
-        newPositions.put("1", "1");
-        newPositions.put("2", "2");
-        newPositions.put("3", "3");
-        newPositions.put("4", "4");
-        newPositions.put("5", "5");
-        newPositions.put("6", "6");
-        newPositions.put("7", "7");
-        newPositions.put("8", "8");
-        newPositions.put("9", "9");
-        positions = newPositions;
+        positions = new ArrayList<String>();
+        positions.add(0, "1");
+        positions.add(1, "2");
+        positions.add(2, "3");
+        positions.add(3, "4");
+        positions.add(4, "5");
+        positions.add(5, "6");
+        positions.add(6, "7");
+        positions.add(7, "8");
+        positions.add(8, "9");
     }
 
     public Board(String[] spots) {
-        positions = new HashMap<String, String>();
+        positions = new ArrayList<String>();
         for (int i=0; i < spots.length; i++) {
-            positions.put(Integer.toString(i+1), spots[i]);
+            positions.add(i, spots[i]);
         }
     }
 
     // methods
-    public HashMap<String, String> getPositions() {
+    public ArrayList<String> getPositions() {
         return this.positions;
     }
 
     public boolean placeMove(String chosenSpace, String playerMark) {
-        this.positions.put(chosenSpace, playerMark);
+        this.positions.set((Integer.parseInt(chosenSpace)-1), playerMark);
         return true;
     }
 
     public List<String> availableSpots() {
-        String[] positionsArray = this.positions.values().toArray(new String[0]);
+        String[] positionsArray = this.positions.toArray(new String[positions.size()]);
         List<String> untakenSpots = new LinkedList<String>();
         for (String position : positionsArray) {
             if (position.equals(x)) {

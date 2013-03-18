@@ -3,6 +3,7 @@ import javattt.*;
 import junit.framework.Assert;
 import org.junit.Test;
 import java.io.ByteArrayInputStream;
+import java.util.ArrayList;
 import java.util.HashMap;
 ;
 
@@ -32,10 +33,10 @@ public class HumanPlayerTest {
 
         InputHandler testInPutter = new InputHandler(new ByteArrayInputStream(testMessage.getBytes()));
         String testMark = "X";
-        HashMap<String, String> map = new HashMap<String, String>();
-        map.put("1", "Water");
-        map.put("2", "Coffee");
-        Board board = new Board(map);
+        ArrayList<String> testList = new ArrayList<String>();
+        testList.add(0, "Water");
+        testList.add(1, "Coffee");
+        Board board = new Board(testList);
 
         HumanPlayer testHuman = new HumanPlayer(testMark, testInPutter, testOutPutter, testMessenger);
         String receivedMessage = new String(testHuman.getMove(board));

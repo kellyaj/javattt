@@ -17,11 +17,11 @@ public class Scorer {
         {"3", "5", "7"}
     };
 
-    public static boolean isGameWon(HashMap<String, String> gameBoard) {
+    public static boolean isGameWon(ArrayList<String> gameBoard) {
         for (String[] row : winCombos) {
             ArrayList<String> currentRow = new ArrayList<String>();
             for (String i : row) {
-                currentRow.add(gameBoard.get(i));
+                currentRow.add(gameBoard.get(Integer.parseInt(i)-1));
             }
             if (currentRow.get(0).equals(currentRow.get(1)) && currentRow.get(1).equals(currentRow.get(2))) {
                 return true;
@@ -36,7 +36,7 @@ public class Scorer {
         return availableSpots.size() == 0;
     }
 
-    public static boolean isGameOver(HashMap<String, String> gameBoard, List<String> availableSpots) {
+    public static boolean isGameOver(ArrayList<String> gameBoard, List<String> availableSpots) {
         if (isGameWon(gameBoard)) {
             return true;
         } else if (isGameStalemate(availableSpots)) {

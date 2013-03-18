@@ -6,6 +6,7 @@ import junit.framework.Assert;
 import org.junit.Before;
 import org.junit.Test;
 
+import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.LinkedList;
 import java.util.List;
@@ -21,13 +22,13 @@ public class EasyComputerTest {
 
     @Test
     public void itShouldPickRandomly() {
-        HashMap<String, String> availableSpots = new HashMap<String, String>();
-        availableSpots.put("1", "1");
-        availableSpots.put("2", "2");
-        availableSpots.put("3", "3");
-        availableSpots.put("4", "4");
-        availableSpots.put("5", "5");
-        availableSpots.put("6", "6");
+        ArrayList<String> availableSpots = new ArrayList<String>();
+        availableSpots.add(0, "1");
+        availableSpots.add(1, "2");
+        availableSpots.add(2, "3");
+        availableSpots.add(3, "4");
+        availableSpots.add(4, "5");
+        availableSpots.add(5, "6");
         Board board = new Board(availableSpots);
         String chosenMove = computerPlayer.getMove(board);
         Assert.assertTrue(board.availableSpots().contains(chosenMove));
