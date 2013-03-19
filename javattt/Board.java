@@ -59,5 +59,16 @@ public class Board {
         return untakenSpots;
     }
 
+    public int getRowSize() {
+        int[] divisors = new int[] {3, 4, 5, 6, 7, 8, 9};
+        for (int i : divisors) {
+            if (positions.size() % i == 0) {
+                return i;
+            }
+
+        }
+        return 0;
+    }
+
 
 }

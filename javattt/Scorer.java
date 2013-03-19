@@ -2,20 +2,10 @@ package javattt;
 
 
 import java.util.ArrayList;
-import java.util.HashMap;
+import java.util.HashSet;
 import java.util.List;
 
 public class Scorer {
-//    public static final String[][] winCombos = new String[][]{
-//        {"1", "2", "3"},
-//        {"4", "5", "6"},
-//        {"7", "8", "9"},
-//        {"1", "4", "7"},
-//        {"2", "5", "8"},
-//        {"3", "6", "9"},
-//        {"1", "5", "9"},
-//        {"3", "5", "7"}
-//    };
 
     public static String[][] getWinCombos(int size) {
         if (size == 9) {
@@ -45,6 +35,19 @@ public class Scorer {
         }
     }
 
+//    public static String[][] getWinCombos(Board gameBoard) {
+//        // based on number of rows/columns, assign wincombos
+          // use rowsize and total size to slice and return a wincombos list
+//    }
+
+    public static ArrayList<String> makeUniqueArrayList(ArrayList<String> currentRow) {
+        HashSet<String> hs = new HashSet<String>();
+        hs.addAll(currentRow);
+        currentRow.clear();
+        currentRow.addAll(hs);
+        return currentRow;
+    }
+
     public static boolean isGameWon(ArrayList<String> gameBoard) {
         String[][] winCombos = getWinCombos(gameBoard.size());
         for (String[] row : winCombos) {
@@ -52,7 +55,8 @@ public class Scorer {
             for (String i : row) {
                 currentRow.add(gameBoard.get(Integer.parseInt(i)-1));
             }
-            if (currentRow.get(0).equals(currentRow.get(1)) && currentRow.get(1).equals(currentRow.get(2))) {
+
+            if (makeUniqueArrayList(currentRow).size() == 1) {
                 return true;
             } else {
                 currentRow.clear();

@@ -34,6 +34,10 @@ public class MinimaxComputer implements Player {
             HashMap<Double, String> scoreMap = new HashMap<Double, String>();
             scoreMap.put(scoreMove(gameBoard, currentPlayer, depth), null);
             return scoreMap;
+        } else if (gameBoard.getPositions().size() == 16 && depth == 5) {
+            HashMap<Double, String> scoreMap = new HashMap<Double, String>();
+            scoreMap.put(scoreMove(gameBoard, currentPlayer, depth), null);
+            return scoreMap;
         }
         depth++;
         List currentList = gameBoard.availableSpots();

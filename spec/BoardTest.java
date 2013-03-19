@@ -54,4 +54,18 @@ public class BoardTest {
           Assert.assertEquals(spots[i], positions.get(i));
       }
   }
+
+    @Test
+    public void itShouldProperlyGetRowSizeForFourByFour() {
+        String[] spots = {"1", "2", "3", "4", "5", "6", "7", "8", "9", "10", "11", "12", "13", "14", "15", "16"};
+        Board board = new Board(spots);
+        Assert.assertEquals(4, board.getRowSize());
+
+    }
+
+    @Test
+    public void itShouldProperlyGetRowSizeForThreeByThree() {
+        Board board = new Board();
+        Assert.assertEquals(3, board.getRowSize());
+    }
 }
